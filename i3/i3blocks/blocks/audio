@@ -1,0 +1,20 @@
+#!/bin/bash
+
+vol_info=$(pactl list sinks)
+volume=$(echo $vol_info | tr ' ' '\n' | grep -wo -m1 "\w*[0-9]*%\w*")
+muted=$(echo $vol_info | grep -wo "yes")
+
+
+if [[ "$muted" == "yes" ]]; then
+  icon=""
+  volume=""
+elif [[ "$volume" == "0%" ]]; then
+  icon=""
+  volume=""
+elif [[ "$volume" -le "49%" ]]; then
+  icon=""
+else
+  icon=""
+fi
+
+echo "$icon $volume"
