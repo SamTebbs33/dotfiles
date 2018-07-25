@@ -1,4 +1,5 @@
 #!/usr/bin/bash
+# set num (apt list --upgradable | grep -c ".*]")
 
 URGENT_VALUE=25
 PACKAGE_COUNT=$(pacman -Qu | wc -l)

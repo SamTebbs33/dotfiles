@@ -1,0 +1,10 @@
+#!/bin/bash
+
+active=$(nmcli -t -f active dev wifi)
+
+if [[ $active = "yes" ]]; then
+  ssid=$(nmcli -t -f ssid dev wifi)
+  echo " $ssid "
+else
+  echo " "
+fi
