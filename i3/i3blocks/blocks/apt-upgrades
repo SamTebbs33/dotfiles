@@ -4,6 +4,10 @@
 # Licensed under the terms of the GNU GPL v2 only.
 # i3blocks blocklet script to display pending system upgrades
 
+if [[ $BLOCK_BUTTON = 1 ]]; then
+  aptitude full-upgrade --assume-yes
+fi
+
 # FontAwesome refresh symbol, change if you do not want to install FontAwesome
 PENDING_SYMBOL="\uf021 "
 
