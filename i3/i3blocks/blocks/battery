@@ -11,22 +11,25 @@ BATTERY_POWER=$(echo "${BATTERY_INFO}" | grep -o '[0-9]\+%' | tr -d '%')
 
 URGENT_VALUE=10
 
-if [[ "${BATTERY_STATE}" = "Charging" ]]; then
-  icon=""
-elif [[ "${BATTERY_POWER}" -ge "90" ]]; then
-  icon=""
-elif [[ "${BATTERY_POWER}" -ge "65" ]]; then
-  icon=""
-elif [[ "${BATERY_POWER}" -ge "40" ]]; then
-  icon=""
-elif [[ "${BATTERY_POWER}" -ge "15" ]]; then
-  icon=""
-else
-  icon=""
-fi
+if [[ "${BATTERY_POWER}" != "" ]]; then
 
-echo "$icon ${BATTERY_POWER}%"
+  if [[ "${BATTERY_STATE}" = "Charging" ]]; then
+    icon=""
+  elif [[ "${BATTERY_POWER}" -ge "90" ]]; then
+    icon=""
+  elif [[ "${BATTERY_POWER}" -ge "65" ]]; then
+    icon=""
+  elif [[ "${BATERY_POWER}" -ge "40" ]]; then
+    icon=""
+  elif [[ "${BATTERY_POWER}" -ge "15" ]]; then
+    icon=""
+  else
+    icon=""
+  fi
 
-if [[ "${BATTERY_POWER}" -le "${URGENT_VALUE}" ]]; then
-  exit 33
+  echo "$icon ${BATTERY_POWER}%"
+
+  if [[ "${BATTERY_POWER}" -le "${URGENT_VALUE}" ]]; then
+    exit 33
+  fi
 fi
