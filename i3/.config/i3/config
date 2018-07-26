@@ -174,6 +174,8 @@ mode "$mode_system" {
 
 bindsym $mode+Pause mode "$mode_system"
 
+for_window [class="Yad"] floating enable # Make yad popups float (used by i3blocks)
+
 # Bindings
 bindsym $mod+shift+x exec i3lock
 
@@ -185,9 +187,9 @@ exec --no-startup-id xset dpms 300
 exec /usr/bin/gnome-settings-daemon
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle && pkill -RTMIN+10 i3blocks
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
