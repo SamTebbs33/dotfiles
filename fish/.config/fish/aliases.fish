@@ -24,10 +24,7 @@ alias ash "java -jar $ASH_PATH"
 alias unisync "rsync -aP ~/Dropbox/University/ sxt567@tinky-winky.cs.bham.ac.uk:work"
 
 # ls
-alias l 'ls -Al' # Disable gorup info, include sizes, limit to 1 column
-alias la 'ls -A' # Display all files excluding .. and ...
-alias ll 'ls -l' # Display in long format
-alias lla 'll -A' # Display all files in long format excluding .. and ...
+alias ls 'ls --color=auto -al'
 
 function lss
     ls $argv | less
