@@ -1,3 +1,6 @@
+set WORKSPACE_HOME "/home/$USER/gnu-work/workspace"
+set PATH "$WORKSPACE_HOME/tools" $PATH
+
 set arm_cross "/home/samteb01/gnu-work/workspace/build-aarch64-none-linux-gnu"
 set arm_cross_elf "/home/samteb01/gnu-work/workspace/build-aarch64-none-elf"
 set arm_cross_bin "$arm_cross/install/bin"
