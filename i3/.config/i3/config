@@ -120,10 +120,11 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 set $wkspcTerminals "1: "
-set $wkspcBrowser "2: "
+set $wkspcBrowser "2: "
 set $wkspcSkype "3: "
 set $wkspcMedia "4: "
 set $wkspcMail "5: "
+set $wkspcGit "6: "
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $wkspcTerminals
@@ -131,18 +132,21 @@ bindsym $mod+Shift+2 move container to workspace $wkspcBrowser
 bindsym $mod+Shift+3 move container to workspace $wkspcSkype
 bindsym $mod+Shift+4 move container to workspace $wkspcMedia
 bindsym $mod+Shift+5 move container to workspace $wkspcMail
+bindsym $mod+Shift+6 move container to workspace $wkspcGit
 
 workspace $wkspcTerminals output LVDS1
 workspace $wkspcBrowser output LVDS1
 workspace $wkspcSkype output LVDS1
 workspace $wkspcMedia output LVDS1
 workspace $wkspcMail output LVDS1
+workspace $wkspcGit output LVDS1
 
 bindsym $mod+1 workspace $wkspcTerminals
 bindsym $mod+2 workspace $wkspcBrowser
 bindsym $mod+3 workspace $wkspcSkype
 bindsym $mod+4 workspace $wkspcMedia
 bindsym $mod+5 workspace $wkspcMail
+bindsym $mod+6 workspace $wkspcGit
 
 assign [class="Firefox"] $wkspcBrowser
 assign [class="Chromium"] $wkspcBrowser
@@ -151,6 +155,7 @@ assign [class="Gnome-terminal"] $wkspcTerminals
 assign [class="Skype"] $wkspcSkype
 assign [class="Spotify"] $wkspcMedia
 assign [class="Thunderbird"] $wkspcMail
+assign [class="GitKraken"] $wkspcGit
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
