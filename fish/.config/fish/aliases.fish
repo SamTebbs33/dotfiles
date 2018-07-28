@@ -53,3 +53,6 @@ if [ (uname) = "Linux" ]
 else
 	alias cat "ccat"
 end
+
+# Path
+set PATH "/home/$USER/bin" $PATH
