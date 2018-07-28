@@ -212,10 +212,10 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightne
 bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
 
 # Media player controls
-bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPlay exec playerctl play-pause && pkill -RTMIN+2 i3blocks
 #bindsym XF86AudioPause exec playerctl pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioNext exec playerctl next && pkill -RTMIN+2 i3blocks
+bindsym XF86AudioPrev exec playerctl previous && pkill -RTMIN+2 i3blocks
 
 # Trackpad settings
 exec xinput set-prop 13 296 1 # Tap to click
