@@ -10,7 +10,7 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # Mod1 = Alt, Mod4 = Win (or Alt_L with ~/.Xmodmap binding
-set $mod Mod4
+set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
@@ -125,6 +125,7 @@ set $wkspcSkype "3: "
 set $wkspcMedia "4: "
 set $wkspcMail "5: "
 set $wkspcGit "6: "
+set $wkspcIDE "7: "
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $wkspcTerminals
@@ -133,6 +134,7 @@ bindsym $mod+Shift+3 move container to workspace $wkspcSkype
 bindsym $mod+Shift+4 move container to workspace $wkspcMedia
 bindsym $mod+Shift+5 move container to workspace $wkspcMail
 bindsym $mod+Shift+6 move container to workspace $wkspcGit
+bindsym $mod+Shift+7 move container to workspace $wkspcIDE
 
 workspace $wkspcTerminals output LVDS1
 workspace $wkspcBrowser output LVDS1
@@ -140,6 +142,7 @@ workspace $wkspcSkype output LVDS1
 workspace $wkspcMedia output LVDS1
 workspace $wkspcMail output LVDS1
 workspace $wkspcGit output LVDS1
+workspace $wkspcIDE output LVDS1
 
 bindsym $mod+1 workspace $wkspcTerminals
 bindsym $mod+2 workspace $wkspcBrowser
@@ -147,21 +150,25 @@ bindsym $mod+3 workspace $wkspcSkype
 bindsym $mod+4 workspace $wkspcMedia
 bindsym $mod+5 workspace $wkspcMail
 bindsym $mod+6 workspace $wkspcGit
+bindsym $mod+7 workspace $wkspcIDE
 
 assign [class="Firefox"] $wkspcBrowser
-assign [class="Chromium"] $wkspcBrowser
+assign [class="chromium"] $wkspcbrowser
+assign [class="Google-chrome"] $wkspcbrowser
 assign [class="Chrome"] $wkspcBrowser
 assign [class="Gnome-terminal"] $wkspcTerminals
 assign [class="Skype"] $wkspcSkype
 assign [class="Spotify"] $wkspcMedia
 assign [class="Thunderbird"] $wkspcMail
 assign [class="GitKraken"] $wkspcGit
+assign [class="jetbrains-clion"] $wkspcIDE
+assign [class="jetbrains-webstorm"] $wkspcIDE
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
 #        status_command i3status -c ~/.config/i3status/i3status.conf
-	separator_symbol "  "
+	separator_symbol " "
         status_command i3blocks #-c ~/.config/i3status/i3status.conf
 }
 
