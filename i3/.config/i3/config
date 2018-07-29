@@ -159,6 +159,7 @@ assign [class="Chrome"] $wkspcBrowser
 assign [class="Gnome-terminal"] $wkspcTerminals
 assign [class="Skype"] $wkspcSkype
 assign [class="Spotify"] $wkspcMedia
+assign [class="spotify"] $wkspcMedia
 assign [class="Thunderbird"] $wkspcMail
 assign [class="GitKraken"] $wkspcGit
 assign [class="jetbrains-clion"] $wkspcIDE
