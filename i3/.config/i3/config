@@ -23,6 +23,8 @@ font pango:FontAwesome 12
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# Set window border size
+default_border pixel 5
 # Hide title bar
 new_window 1pixel
 
