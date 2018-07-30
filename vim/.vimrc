@@ -131,6 +131,9 @@ end
 let g:vim_exec_clear = 1
 let g:vim_exec_vimux = 0
 
+" Set filtype when opening i3 config
+autocmd BufEnter ~/dotfiles/i3/.config/i3/config set ft=i3config
+
 " Change vim shell to the standard shell
 if &shell =~# 'fish$'
 	set shell=sh
