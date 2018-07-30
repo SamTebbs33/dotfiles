@@ -21,8 +21,14 @@ font pango:FontAwesome 8
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# i3-gaps
+gaps inner 7
+gaps outer 3
+
 # Hide title bar
 new_window 1pixel
+# Disable window borders
+for_window [class="^.*"] border pixel 0
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
