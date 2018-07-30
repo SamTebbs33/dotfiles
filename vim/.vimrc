@@ -38,6 +38,8 @@ nnoremap <leader>f :Autoformat<CR>
 set backspace=indent,eol,start
 nnoremap <leader>r :so ~/.vimrc<CR>
 nnoremap <leader>a ggVGG
+nnoremap <leader><Down> <PageDown>
+nnoremap <leader><Up> <PageUp>
 
 " Make one line visible above and below cursor
 set scrolloff=1
@@ -64,7 +66,7 @@ let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
 
 " Enabling vim-airline status bar
-let g:airline_theme='jellybeans'
+let g:airline_theme='hybrid'
 set laststatus=2
 set ttimeoutlen=50
 
@@ -78,9 +80,12 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " Colour schemes
 set background=dark
-color jellybeans
+colorscheme hybrid_material
+let g:enable_bold_font = 1
+let g:enable_italic_font = 1
+let g:hybrid_transparent_background = 1
 " Change line number foreground and background colours
-" highlight LineNr ctermfg=white ctermbg=darkgrey
+highlight LineNr ctermfg=7
 set t_Co=256
 " Fixes terminal colours for the solarized colourscheme
 let g:solarized_termcolors=256
@@ -125,6 +130,9 @@ end
 " Vim exec
 let g:vim_exec_clear = 1
 let g:vim_exec_vimux = 0
+
+" Set filtype when opening i3 config
+autocmd BufEnter ~/dotfiles/i3/.config/i3/config set ft=i3config
 
 " Change vim shell to the standard shell
 if &shell =~# 'fish$'

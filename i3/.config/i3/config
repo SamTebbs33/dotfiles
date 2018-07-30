@@ -23,6 +23,11 @@ font pango:FontAwesome 12
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# Set window border size
+default_border pixel 5
+# Hide title bar
+new_window 1pixel
+
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
@@ -169,7 +174,7 @@ assign [class="jetbrains-webstorm"] $wkspcIDE
 # finds out, if available)
 bar {
 #        status_command i3status -c ~/.config/i3status/i3status.conf
-	separator_symbol " "
+	separator_symbol "|"
         status_command i3blocks #-c ~/.config/i3status/i3status.conf
 }
 

@@ -1,3 +1,4 @@
+export WORKSPACE_HOME="/home/$USER/gnu-work/workspace"
 case "$0" in
           -sh|sh|*/sh)	modules_shell=sh ;;
        -ksh|ksh|*/ksh)	modules_shell=ksh ;;
