@@ -85,7 +85,7 @@ let g:enable_bold_font = 1
 let g:enable_italic_font = 1
 let g:hybrid_transparent_background = 1
 " Change line number foreground and background colours
-" highlight LineNr ctermfg=white ctermbg=darkgrey
+highlight LineNr ctermfg=7
 set t_Co=256
 " Fixes terminal colours for the solarized colourscheme
 let g:solarized_termcolors=256
