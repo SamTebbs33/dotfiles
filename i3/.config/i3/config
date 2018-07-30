@@ -170,11 +170,12 @@ assign [class="jetbrains-webstorm"] $wkspcIDE
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-#        status_command i3status -c ~/.config/i3status/i3status.conf
-	separator_symbol "|"
-        status_command i3blocks #-c ~/.config/i3status/i3status.conf
-}
+#bar {
+#       status_command i3status -c ~/.config/i3status/i3status.conf
+#	separator_symbol " "
+#       status_command i3blocks #-c ~/.config/i3status/i3status.conf
+#}
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
