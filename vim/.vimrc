@@ -79,8 +79,10 @@ let g:UltiSnipsJumpForwardTrigger="<s-tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " Colour schemes
+let base16colorspace=256
+colorscheme base16-default-dark
 set background=dark
-colorscheme hybrid_material
+"colorscheme hybrid_material
 let g:enable_bold_font = 1
 let g:enable_italic_font = 1
 let g:hybrid_transparent_background = 1
