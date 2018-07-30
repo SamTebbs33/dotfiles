@@ -66,7 +66,7 @@ let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
 
 " Enabling vim-airline status bar
-let g:airline_theme='jellybeans'
+let g:airline_theme='hybrid'
 set laststatus=2
 set ttimeoutlen=50
 
@@ -80,7 +80,10 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " Colour schemes
 set background=dark
-color jellybeans
+colorscheme hybrid_material
+let g:enable_bold_font = 1
+let g:enable_italic_font = 1
+let g:hybrid_transparent_background = 1
 " Change line number foreground and background colours
 " highlight LineNr ctermfg=white ctermbg=darkgrey
 set t_Co=256
