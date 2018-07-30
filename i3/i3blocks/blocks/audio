@@ -120,7 +120,7 @@ function print_format {
         1) echo "$SYMBOL$VOL$PERCENT [$NAME]" ;;
         2) echo "$SYMBOL$VOL$PERCENT [$INDEX]";;
         3) echo "$SYMBOL$VOL$PERCENT" ;;
-        *) echo "$SYMBOL$VOL$PERCENT [$INDEX:$NAME]" ;;
+        *) echo "$SYMBOL$VOL$PERCENT" ;;
     esac
 }
 
