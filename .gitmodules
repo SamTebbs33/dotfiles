@@ -4,3 +4,6 @@
 [submodule "vim/.vim/bundle/syntax"]
 	path = vim/.vim/bundle/syntax
 	url = https://github.com/mboughaba/i3config.vim.git
+[submodule "i3/polybar-scripts"]
+	path = i3/polybar-scripts
+	url = git@github.com:SamTebbs33/polybar-scripts.git
