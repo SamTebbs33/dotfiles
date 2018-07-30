@@ -3,6 +3,12 @@
 
 INSTANCE="${BLOCK_INSTANCE}"
 
+if [[ "${BLOCK_BUTTON}" -eq 1 ]]; then
+    $(playerctl ${ARGUMENTS} play-pause)
+elif [[ "${BLOCK_BUTTON}" -eq 3 ]]; then
+    $(playerctl ${ARGUMENTS} next)
+fi
+
 if [[ "${INSTANCE}" != "" ]]; then
   ARGUMENTS="--player ${INSTANCE}"
 fi
@@ -11,12 +17,6 @@ ICON_PLAY=""
 ICON_PAUSE=""
 ICON_STOP="≠"
 CUR_ICON=""
-
-if [[ "${BLOCK_BUTTON}" -eq 1 ]]; then
-    $(playerctl ${ARGUMENTS} play-pause)
-elif [[ "${BLOCK_BUTTON}" -eq 3 ]]; then
-    $(playerctl ${ARGUMENTS} next)
-fi
 
 PLAYER_STATUS=$(playerctl ${ARGUMENTS} status)
 INFO_TITLE=$(playerctl ${ARGUMENTS} metadata title)
