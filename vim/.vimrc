@@ -38,6 +38,8 @@ nnoremap <leader>f :Autoformat<CR>
 set backspace=indent,eol,start
 nnoremap <leader>r :so ~/.vimrc<CR>
 nnoremap <leader>a ggVGG
+nnoremap <leader><Down> <PageDown>
+nnoremap <leader><Up> <PageUp>
 
 " Make one line visible above and below cursor
 set scrolloff=1
