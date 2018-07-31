@@ -7,3 +7,6 @@
 [submodule "i3/polybar-scripts"]
 	path = i3/polybar-scripts
 	url = git@github.com:SamTebbs33/polybar-scripts.git
+[submodule "vim/.vim/bundle/base16-vim"]
+	path = vim/.vim/bundle/base16-vim
+	url = https://github.com/chriskempson/base16-vim
