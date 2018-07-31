@@ -16,7 +16,7 @@ set $mod Mod1
 # is used in the bar {} block below. ISO 10646 = Unicode
 #font pango:monospace 12
 #font pango:DejaVu Sans Mono 10
-font pango:FontAwesome 8
+font pango:FontAwesome 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
