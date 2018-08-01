@@ -79,7 +79,8 @@ let g:UltiSnipsJumpForwardTrigger="<s-tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " Colour schemes
-colorscheme hybrid_material
+"colorscheme hybrid_material
+color jellybeans
 set background=dark
 let g:enable_bold_font = 1
 let g:enable_italic_font = 1
