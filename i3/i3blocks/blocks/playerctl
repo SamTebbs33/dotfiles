@@ -33,8 +33,5 @@ fi
 
 if [[ "${INFO_TITLE}" != "" ]] && [[ "${INFO_ARTIST}" != "" ]]; then
   str="${CUR_ICON} ${INFO_TITLE} - ${INFO_ARTIST}"
-  if [ ${#str} -ge 28 ]; then
-    str=$(echo $str | cut -c 1-27)"..."
-  fi
   echo $str
 fi
