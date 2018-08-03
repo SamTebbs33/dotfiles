@@ -1,9 +1,7 @@
 function fish_prompt
 	set -l name (set_color blue; printf (whoami); set_color normal)
 	set -l dir (set_color green; printf (pwd | sed 's|'$HOME'|~|g'); set_color normal)
-	echo ""
-	echo "┌─[$name]─[$dir]"
-	echo "└──> "
+	echo "[$name]─[$dir]─> "
 end
 
 function fish_right_prompt
