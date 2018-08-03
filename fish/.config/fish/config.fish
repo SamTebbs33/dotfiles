@@ -7,5 +7,5 @@ set -q XDG_DATA_HOME
 source $OMF_PATH/init.fish
 for file in ~/.config/fish/*.fish
 	set filename (basename $file)
-	if [ "$filename" != "config.fish" ]; source $file; end
+	if [ "$filename" != "config.fish" ]; and [ "$filename" != "_*" ]; source $file; end
 end
