@@ -53,3 +53,16 @@ end
 
 # Path
 set PATH "/home/$USER/bin" $PATH
+
+# grep
+alias grp "grep -n"
+alias grpi "grep -ni"
+alias grpr "grep -nr"
+alias grpri "grep -nri"
+alias grpa "grep -nC"
+
+# RM
+alias rmr "rm -r"
+alias rmf "rm -f"
+alias rmrf "rm -rf"
+alias rmi "rm -ri *"
