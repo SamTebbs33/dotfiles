@@ -24,7 +24,9 @@ alias ash "java -jar $ASH_PATH"
 alias unisync "rsync -aP ~/Dropbox/University/ sxt567@tinky-winky.cs.bham.ac.uk:work"
 
 # ls
-alias ls 'ls --color=auto -al -I "." -I ".."'
+alias ls 'ls --color=auto -alh -I "." -I ".."'
+alias lsr "ls -R"
+alias realls "/bin/ls"
 
 function lss
     ls $argv | less
