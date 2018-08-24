@@ -37,16 +37,11 @@ alias cdgit "cd $GIT_REPOS"
 alias cddl "cd ~/Downloads"
 
 # Other
-alias clean "sudo rm -rf /private/var/log/asl/*.asl /var/log/asl/*.asl"
 alias . "open ."
 alias .. 'cd ..'
 alias mk "mkfile 0"
-alias rmr "rm -r"
-alias rmf "rm -f"
-alias rmrf "rm -rf"
 alias cls "clear"
 alias starwars "telnet towel.blinkenlights.nl"
-alias rmi "rm -ri *"
 if [ (uname) = "Linux" ]
 	alias aupdate "sudo apt-get update"
 	alias arm "sudo apt-get remove"
