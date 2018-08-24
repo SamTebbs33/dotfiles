@@ -32,6 +32,9 @@ function lss
     ls $argv | less
 end
 
+# Less
+alias less "less -R"
+
 # Cd
 alias cdgit "cd $GIT_REPOS"
 alias cddl "cd ~/Downloads"
