@@ -177,7 +177,7 @@ assign [class="jetbrains-webstorm"] $wkspcIDE
 # finds out, if available)
 bar {
 	separator_symbol "|"
-	status_command i3blocks #-c ~/.config/i3status/i3status.conf
+	status_command i3blocks
 }
 #exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
