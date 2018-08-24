@@ -18,6 +18,9 @@ alias gp "git pull"
 alias gpo "git pull origin"
 alias gs "git status -sb"
 alias gl "git log --date=short --decorate --oneline --graph"
+function gignore -a file
+	echo "$file" >> .gitignore
+end
 function glf -a filter
 	gl --grep="$filter" 
 end
