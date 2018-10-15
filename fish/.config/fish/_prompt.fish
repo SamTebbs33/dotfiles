@@ -24,15 +24,31 @@ function fish_right_prompt
 		else
 			set branch_colour bryellow
 		end
-		set -l git_unstaged (git ls-files --others --exclude-standard | wc -l --)
+
+		set -l git_staged (git diff --name-only --cached | wc -l --)
+		if [ $git_staged -eq 0 ]
+			set git_staged ""
+		else
+			set git_staged (printf " | "; set_color brgreen; printf "*$git_staged"; set_color normal)
+		end
+
+		set -l git_untracked (git ls-files --others --exclude-standard | wc -l --)
+		if [ $git_untracked -eq 0 ]
+			set git_untracked ""
+		else
+			set git_untracked (printf " | "; set_color brgreen; printf "+$git_untracked"; set_color normal)
+		end
+
+		set -l git_unstaged (git ls-files --modified --exclude-standard | wc -l --)
 		if [ $git_unstaged -eq 0 ]
 			set git_unstaged ""
 		else
-			set git_unstaged (printf " | "; set_color brgreen; printf "+$git_unstaged"; set_color normal)
+			set git_unstaged (printf " | "; set_color brgreen; printf "~$git_unstaged"; set_color normal)
 		end
-		printf " ("(set_color $branch_colour; printf $branch; set_color normal)"$git_unstaged)"
+
+		printf " ("(set_color $branch_colour; printf $branch; set_color normal)"$git_unstaged$git_staged$git_untracked)"
 	end
 	if [ "$s" != "0" ]
-		printf " {"(set_color brred; printf $s; set_color normal)"}"
+		printf " ("(set_color brred; printf $s; set_color normal)")"
 	end
 end
