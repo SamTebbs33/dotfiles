@@ -6,6 +6,7 @@ function gc -a msg -d "Make a commit"
 		git commit -m $msg
 	end
 end
+alias gca "git commit --amend"
 alias gserve "git daemon --reuseaddr --verbose  --base-path=. --export-all"
 alias gr "git revert"
 function gcu -a msg -d "Commit then push to the remote"
@@ -24,12 +25,14 @@ end
 function glf -a filter
 	gl --grep="$filter" 
 end
+alias grb "git rebase"
 alias glr "git reflog --decorate --oneline"
 alias gb "git branch"
 alias gm "git merge"
 alias ga "git add"
 alias grm "git rm"
 alias gus "git push -u origin"
+alias gps "git pull -u origin"
 alias gco "git checkout"
 alias gcob "git checkout -b"
 alias gupdate "git pull --rebase --prune; git submodule update --init --recursive"
@@ -57,6 +60,7 @@ end
 alias gwho "git shortlog -s --"
 alias gconf "git config --global"
 alias gdiff "git diff"
+alias gd "git diff"
 function gshow -a filter -d "Show all commits whose message contains a certain string"
 	git show :/$filter
 end
