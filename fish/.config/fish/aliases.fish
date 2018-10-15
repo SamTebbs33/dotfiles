@@ -63,6 +63,7 @@ alias grpi "grep -ni"
 alias grpr "grep -nr"
 alias grpri "grep -nri"
 alias grpa "grep -nC"
+alias grpra "grep -nrC"
 
 # RM
 alias rmr "rm -r"
