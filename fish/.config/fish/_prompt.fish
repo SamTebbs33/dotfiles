@@ -11,7 +11,11 @@ function fish_prompt
 	echo "→ "
 end
 
+set git_indicator_cmds "git diff --name-only --cached" "git ls-files --others --exclude-standard" "git ls-files --modified --exclude-standard"
+set git_indicator_symbols "*" "+" "~"
+
 function fish_right_prompt
+	set git_indicator_values
 	set -l s $status
 	set -l branch (git branch ^/dev/null | sed -n '/\* /s///p')
 	#if set -q $BATTERY_IS_CHARGING
@@ -25,28 +29,23 @@ function fish_right_prompt
 			set branch_colour bryellow
 		end
 
-		set -l git_staged (git diff --name-only --cached | wc -l --)
-		if [ $git_staged -eq 0 ]
-			set git_staged ""
-		else
-			set git_staged (printf " | "; set_color brgreen; printf "*$git_staged"; set_color normal)
+		for i in (seq 1 (count $git_indicator_cmds))
+			set cmd $git_indicator_cmds[$i]
+			set -l val (eval $cmd | wc -l --)
+			if [ "$val" -gt 0 ]
+				set val $git_indicator_symbols[$i]$val
+				set git_indicator_values $git_indicator_values $val
+			end
 		end
 
-		set -l git_untracked (git ls-files --others --exclude-standard | wc -l --)
-		if [ $git_untracked -eq 0 ]
-			set git_untracked ""
-		else
-			set git_untracked (printf " | "; set_color brgreen; printf "+$git_untracked"; set_color normal)
+		printf " ("(set_color $branch_colour; printf $branch; set_color normal)
+		for i in (seq 1 (count $git_indicator_values))
+			printf " | "
+			set_color brcyan
+			printf $git_indicator_values[$i]
+			set_color normal
 		end
-
-		set -l git_unstaged (git ls-files --modified --exclude-standard | wc -l --)
-		if [ $git_unstaged -eq 0 ]
-			set git_unstaged ""
-		else
-			set git_unstaged (printf " | "; set_color brgreen; printf "~$git_unstaged"; set_color normal)
-		end
-
-		printf " ("(set_color $branch_colour; printf $branch; set_color normal)"$git_unstaged$git_staged$git_untracked)"
+		printf ")"
 	end
 	if [ "$s" != "0" ]
 		printf " ("(set_color brred; printf $s; set_color normal)")"
