@@ -37,6 +37,8 @@ alias gco "git checkout"
 alias gcob "git checkout -b"
 alias gupdate "git pull --rebase --prune; git submodule update --init --recursive"
 alias gstash "git stash"
+# Stash unstaged changes only
+alias gstashu "git commit -m WIP; git add .; git stash; git reset --soft HEAD^"
 alias gstasha "git stash apply"
 function gwip -a wipmsg -d "Make a WIP commit with all changes staged"
 	ga -A
