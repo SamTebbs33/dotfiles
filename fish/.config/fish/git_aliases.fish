@@ -63,9 +63,10 @@ alias gwho "git shortlog -s --"
 alias gconf "git config --global"
 alias gdiff "git diff"
 alias gd "git diff"
-function gshow -a filter -d "Show all commits whose message contains a certain string"
+function gsearch -a filter -d "Show all commits whose message contains a certain string"
 	git show :/$filter
 end
+alias gshow "git show"
 alias gissues "git browse -- issues"
 alias gwiki "git browse -- wiki"
 function gclonehttp -a repo -a dest
