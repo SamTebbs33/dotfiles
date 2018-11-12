@@ -58,12 +58,19 @@ end
 set PATH "/home/$USER/bin" $PATH
 
 # grep
-alias grp "grep -n"
-alias grpi "grep -ni"
-alias grpr "grep -nr"
-alias grpri "grep -nri"
-alias grpa "grep -nC"
-alias grpra "grep -nrC"
+function grp
+    set branch (git symbolic-ref -q --short HEAD)
+    if [ $branch != "fatal: Not a git repository (or any of the parent directories): .git" ]
+        git grep -n $argv
+    else
+        grep -n $argv
+    end
+end
+alias grpi "grp -ni"
+alias grpr "grp -nr"
+alias grpri "grp -nri"
+alias grpa "grp -nC"
+alias grpra "grp -nrC"
 
 # RM
 alias rmr "rm -r"
