@@ -6,6 +6,7 @@ function gc -a msg -d "Make a commit"
 		git commit -m $msg
 	end
 end
+alias gca "git commit --amend"
 alias gserve "git daemon --reuseaddr --verbose  --base-path=. --export-all"
 alias gr "git revert"
 function gcu -a msg -d "Commit then push to the remote"
@@ -18,19 +19,26 @@ alias gp "git pull"
 alias gpo "git pull origin"
 alias gs "git status -sb"
 alias gl "git log --date=short --decorate --oneline --graph"
+function gignore -a file
+	echo "$file" >> .gitignore
+end
 function glf -a filter
 	gl --grep="$filter" 
 end
+alias grb "git rebase"
 alias glr "git reflog --decorate --oneline"
 alias gb "git branch"
 alias gm "git merge"
 alias ga "git add"
 alias grm "git rm"
 alias gus "git push -u origin"
+alias gps "git pull -u origin"
 alias gco "git checkout"
 alias gcob "git checkout -b"
 alias gupdate "git pull --rebase --prune; git submodule update --init --recursive"
 alias gstash "git stash"
+# Stash unstaged changes only
+alias gstashu "git commit -m WIP; git add .; git stash; git reset --soft HEAD^"
 alias gstasha "git stash apply"
 function gwip -a wipmsg -d "Make a WIP commit with all changes staged"
 	ga -A
@@ -54,9 +62,11 @@ end
 alias gwho "git shortlog -s --"
 alias gconf "git config --global"
 alias gdiff "git diff"
-function gshow -a filter -d "Show all commits whose message contains a certain string"
+alias gd "git diff"
+function gsearch -a filter -d "Show all commits whose message contains a certain string"
 	git show :/$filter
 end
+alias gshow "git show"
 alias gissues "git browse -- issues"
 alias gwiki "git browse -- wiki"
 function gclonehttp -a repo -a dest

@@ -30,6 +30,7 @@ set hlsearch
 let &path.="src/include,/usr/include/AL,"
 
 let mapleader = " "
+nnoremap <tab> >>
 nnoremap <leader>c "*yy
 nnoremap <leader>q :q<CR>
 nnoremap <leader>w :w<CR>

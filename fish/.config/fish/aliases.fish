@@ -24,27 +24,27 @@ alias ash "java -jar $ASH_PATH"
 alias unisync "rsync -aP ~/Dropbox/University/ sxt567@tinky-winky.cs.bham.ac.uk:work"
 
 # ls
-alias ls 'ls --color=auto -al -I "." -I ".."'
+alias ls 'ls --color=auto -alh -I "." -I ".."'
+alias lsr "ls -R"
+alias realls "/bin/ls"
 
 function lss
     ls $argv | less
 end
+
+# Less
+alias less "less -R"
 
 # Cd
 alias cdgit "cd $GIT_REPOS"
 alias cddl "cd ~/Downloads"
 
 # Other
-alias clean "sudo rm -rf /private/var/log/asl/*.asl /var/log/asl/*.asl"
 alias . "open ."
 alias .. 'cd ..'
 alias mk "mkfile 0"
-alias rmr "rm -r"
-alias rmf "rm -f"
-alias rmrf "rm -rf"
 alias cls "clear"
 alias starwars "telnet towel.blinkenlights.nl"
-alias rmi "rm -ri *"
 if [ (uname) = "Linux" ]
 	alias aupdate "sudo apt-get update"
 	alias arm "sudo apt-get remove"
@@ -56,3 +56,24 @@ end
 
 # Path
 set PATH "/home/$USER/bin" $PATH
+
+# grep
+function grp
+    set branch (git symbolic-ref -q --short HEAD)
+    if [ $branch != "fatal: Not a git repository (or any of the parent directories): .git" ]
+        git grep -n $argv
+    else
+        grep -n $argv
+    end
+end
+alias grpi "grp -ni"
+alias grpr "grp -nr"
+alias grpri "grp -nri"
+alias grpa "grp -nC"
+alias grpra "grp -nrC"
+
+# RM
+alias rmr "rm -r"
+alias rmf "rm -f"
+alias rmrf "rm -rf"
+alias rmi "rm -ri *"
