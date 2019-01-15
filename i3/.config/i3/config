@@ -135,6 +135,7 @@ set $wkspcMedia "4: "
 set $wkspcMail "5: "
 set $wkspcGit "6: "
 set $wkspcIDE "7: "
+set $wkspcGames "8: "
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $wkspcTerminals
@@ -144,6 +145,7 @@ bindsym $mod+Shift+4 move container to workspace $wkspcMedia
 bindsym $mod+Shift+5 move container to workspace $wkspcMail
 bindsym $mod+Shift+6 move container to workspace $wkspcGit
 bindsym $mod+Shift+7 move container to workspace $wkspcIDE
+bindsym $mod+Shift+8 move container to workspace $wkspcGames
 
 workspace $wkspcTerminals output LVDS1
 workspace $wkspcBrowser output LVDS1
@@ -152,6 +154,7 @@ workspace $wkspcMedia output LVDS1
 workspace $wkspcMail output LVDS1
 workspace $wkspcGit output LVDS1
 workspace $wkspcIDE output LVDS1
+workspace $wkspcGames output LVDS1
 
 bindsym $mod+1 workspace $wkspcTerminals
 bindsym $mod+2 workspace $wkspcBrowser
@@ -160,6 +163,7 @@ bindsym $mod+4 workspace $wkspcMedia
 bindsym $mod+5 workspace $wkspcMail
 bindsym $mod+6 workspace $wkspcGit
 bindsym $mod+7 workspace $wkspcIDE
+bindsym $mod+8 workspace $wkspcGames
 
 assign [class="Firefox"] $wkspcBrowser
 assign [class="chromium"] $wkspcbrowser
@@ -173,6 +177,7 @@ assign [class="Thunderbird"] $wkspcMail
 assign [class="GitKraken"] $wkspcGit
 assign [class="jetbrains-clion"] $wkspcIDE
 assign [class="jetbrains-webstorm"] $wkspcIDE
+assign [class="Steam"] $wkspcGames
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)

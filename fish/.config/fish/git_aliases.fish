@@ -91,8 +91,9 @@ function gcloner -a repo -a dest
 	git clone --recurse-submodules git@github.com:$repo $dest
 end
 
-gconf advice.implicitIdentity false
-gconf advice.resolveConflict false
-gconf advice.commitBeforeMerge false
-gconf advice.statusHints false
-gconf push.default matching
+alias gconf_ "git config"
+gconf_ --global advice.implicitIdentity false
+gconf_ --global advice.resolveConflict false
+gconf_ --global advice.commitBeforeMerge false
+gconf_ --global advice.statusHints false
+gconf_ --global push.default matching
