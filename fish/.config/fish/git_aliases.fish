@@ -64,7 +64,9 @@ function gclear -a msg -d "Clear local changes after adding them to an unreachab
 	git reset HEAD~1 --hard
 end
 mk_abbrev gwho "git shortlog -s --"
-mk_abbrev gconf "git config --global"
+function gconf
+	git config --global $argv
+end
 mk_abbrev gdiff "git diff"
 mk_abbrev gd "git diff"
 function gsearch -a filter -d "Show all commits whose message contains a certain string"
