@@ -70,6 +70,8 @@ let g:indent_guides_guide_size = 1
 
 " Enabling vim-airline status bar
 let g:airline_theme='hybrid'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
 set laststatus=2
 set ttimeoutlen=50
 
