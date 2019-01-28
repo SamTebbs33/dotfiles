@@ -117,6 +117,7 @@ call NtHlFile("vim", "cyan", "none", "cyan", "#151515")
 " Buffer things
 au BufAdd,BufNewFile * nested tab sball
 nnoremap <F5> :buffers<CR>:buffer<Space>
+nnoremap <leader>d :bd<CR>
 nnoremap <leader>b :bp<CR>
 nnoremap <leader>n :bn<CR>
 nnoremap <leader>l :ls<CR>
