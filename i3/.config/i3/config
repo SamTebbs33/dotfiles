@@ -175,7 +175,7 @@ assign [class="Spotify"] $wkspcMedia
 assign [class="spotify"] $wkspcMedia
 assign [class="Thunderbird"] $wkspcMail
 assign [class="GitKraken"] $wkspcGit
-assign [class="jetbrains-clion"] $wkspcIDE
+#assign [class="jetbrains-clion"] $wkspcIDE
 assign [class="jetbrains-webstorm"] $wkspcIDE
 assign [class="Steam"] $wkspcGames
 
