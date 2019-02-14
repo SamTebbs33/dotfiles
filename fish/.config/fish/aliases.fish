@@ -56,6 +56,7 @@ end
 
 # Path
 set PATH "/home/$USER/bin" $PATH
+set PATH "/home/$USER/bin/zig-linux-x86_64-0.3.0+c7b9ab98" $PATH
 
 # grep
 function grp
@@ -77,3 +78,8 @@ alias rmr "rm -r"
 alias rmf "rm -f"
 alias rmrf "rm -rf"
 alias rmi "rm -ri *"
+
+# Other
+function lines -a file -a from -a num_lines
+    tail $file -n$from | head -n$num_lines
+end
