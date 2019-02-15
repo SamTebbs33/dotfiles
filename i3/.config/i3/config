@@ -45,6 +45,10 @@ bindsym $mod+d exec j4-dmenu-desktop
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
+# cycle through workspaces
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
+
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
