@@ -81,5 +81,5 @@ alias rmi "rm -ri *"
 
 # Other
 function lines -a file -a from -a num_lines
-    tail $file -n$from | head -n$num_lines
+    tail $file -n+$from | head -n$num_lines
 end
