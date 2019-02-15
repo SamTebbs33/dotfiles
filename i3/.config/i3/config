@@ -164,14 +164,23 @@ workspace $wkspcGames output LVDS1
 workspace $wkspcDebug output LVDS1
 
 bindsym $mod+1 workspace $wkspcTerminals
+bindsym F1 workspace $wkspcTerminals
 bindsym $mod+2 workspace $wkspcBrowser
+bindsym F2 workspace $wkspcBrowser
 bindsym $mod+3 workspace $wkspcChat
+bindsym F3 workspace $wkspcChat
 bindsym $mod+4 workspace $wkspcMedia
+bindsym F4 workspace $wkspcMedia
 bindsym $mod+5 workspace $wkspcMail
+bindsym F5 workspace $wkspcMail
 bindsym $mod+6 workspace $wkspcGit
+bindsym F6 workspace $wkspcGit
 bindsym $mod+7 workspace $wkspcIDE
+bindsym F7 workspace $wkspcIDE
 bindsym $mod+8 workspace $wkspcGames
+bindsym F8 workspace $wkspcGames
 bindsym $mod+9 workspace $wkspcDebug
+bindsym F9 workspace $wkspcDebug
 
 assign [class="Firefox"] $wkspcBrowser
 assign [class="chromium"] $wkspcbrowser
