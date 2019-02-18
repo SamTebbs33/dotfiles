@@ -42,6 +42,14 @@ nnoremap w<up> <c-w>k
 nnoremap wl <c-w>l
 nnoremap w<right> <c-w>l
 
+" Automatic toggling of hybrid line numbers
+set number relativenumber
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
+
 " Make one line visible above and below cursor
 set scrolloff=1
 set display+=lastline
