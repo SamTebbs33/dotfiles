@@ -19,7 +19,6 @@ set paste
 set hlsearch
 
 let mapleader = " "
-nnoremap <tab> <esc>
 nnoremap <leader>c "*yy
 nnoremap <leader>q :q<CR>
 nnoremap <leader>w :w<CR>
@@ -41,6 +40,9 @@ nnoremap wk <c-w>k
 nnoremap w<up> <c-w>k
 nnoremap wl <c-w>l
 nnoremap w<right> <c-w>l
+
+" Listing buffers
+nnoremap <tab> :buffers<CR>:buffer<Space>
 
 " Automatic toggling of hybrid line numbers
 set number relativenumber
