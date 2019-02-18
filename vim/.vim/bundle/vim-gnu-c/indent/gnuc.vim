@@ -1,1 +1,0 @@
-runtime! indent/c.vim
