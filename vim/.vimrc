@@ -81,6 +81,7 @@ colorscheme jellybeans
 " open when opening vim without a path sepcified
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+nnoremap <leader>t :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 let g:NERDTreeIndicatorMapCustom = {
     \ "Modified"  : "~",
