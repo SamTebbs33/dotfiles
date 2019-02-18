@@ -39,13 +39,14 @@ set clipboard=unnamed
 " Kill the capslock when leaving insert mode.
 autocmd InsertLeave * set iminsert=0
 
-" Buffer things
+" Tab things
 au BufAdd,BufNewFile * nested tab sball
-nnoremap <F5> :buffers<CR>:buffer<Space>
-nnoremap <leader>d :bd<CR>
-nnoremap <leader>b :bp<CR>
-nnoremap <leader>n :bn<CR>
-nnoremap <leader>l :ls<CR>
+nnoremap <leader>b :tabl<CR>
+nnoremap <leader>n :tabn<CR>
+" alias tabnew to tn
+cnoreabbrev <expr> tn getcmdtype() == ":" && getcmdline() == 'tn' ? 'tabnew' : 'tn'
+" alias tabedit to te
+cnoreabbrev <expr> te getcmdtype() == ":" && getcmdline() == 'te' ? 'tabedit' : 'te'
 
 " Change swap
 set directory=/tmp
@@ -60,3 +61,9 @@ endif
 
 " Colourscheme
 colorscheme jellybeans
+
+" Airline
+" tab line
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
