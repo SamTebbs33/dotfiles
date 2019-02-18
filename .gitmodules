@@ -1,3 +1,6 @@
 [submodule "i3/polybar-scripts"]
 	path = i3/polybar-scripts
 	url = git@github.com:SamTebbs33/polybar-scripts.git
+[submodule "vim/.vim/bundle/jellybeans.vim"]
+	path = vim/.vim/bundle/jellybeans.vim
+	url = https://github.com/nanotech/jellybeans.vim
