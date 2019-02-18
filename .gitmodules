@@ -22,3 +22,6 @@
 [submodule "vim/.vim/bundle/nerdtree-grep-plugin"]
 	path = vim/.vim/bundle/nerdtree-grep-plugin
 	url = https://github.com/MarSoft/nerdtree-grep-plugin.git
+[submodule "vim/.vim/bundle/vimagit"]
+	path = vim/.vim/bundle/vimagit
+	url = https://github.com/jreybert/vimagit
