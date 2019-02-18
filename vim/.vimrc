@@ -1,3 +1,4 @@
+set hidden
 set exrc
 set secure
 set nocompatible
@@ -25,10 +26,21 @@ nnoremap <leader>w :w<CR>
 nnoremap <leader>x :wq<CR>
 nnoremap <leader>f :Autoformat<CR>
 set backspace=indent,eol,start
+" Reload .vimrc
 nnoremap <leader>r :so ~/.vimrc<CR>
+" Select all
 nnoremap <leader>a ggVGG
 nnoremap <leader><Down> <PageDown>
 nnoremap <leader><Up> <PageUp>
+" Window movement
+nnoremap wh <c-w>h
+nnoremap w<left> <c-w>h
+nnoremap wj <c-w>j
+nnoremap w<down> <c-w>j
+nnoremap wk <c-w>k
+nnoremap w<up> <c-w>k
+nnoremap wl <c-w>l
+nnoremap w<right> <c-w>l
 
 " Make one line visible above and below cursor
 set scrolloff=1
@@ -38,15 +50,6 @@ set clipboard=unnamed
 
 " Kill the capslock when leaving insert mode.
 autocmd InsertLeave * set iminsert=0
-
-" Tab things
-au BufAdd,BufNewFile * nested tab sball
-nnoremap <leader>j :tabp<CR>
-nnoremap <leader>k :tabn<CR>
-" alias tabnew to tn
-cnoreabbrev <expr> tn getcmdtype() == ":" && getcmdline() == 'tn' ? 'tabnew' : 'tn'
-" alias tabedit to te
-cnoreabbrev <expr> te getcmdtype() == ":" && getcmdline() == 'te' ? 'tabedit' : 'te'
 
 " Change swap
 set directory=/tmp
