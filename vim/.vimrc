@@ -32,6 +32,7 @@ nnoremap <leader>a ggVGG
 nnoremap <leader><Down> <PageDown>
 nnoremap <leader><Up> <PageUp>
 " Window movement
+nnoremap wq <c-w>q
 nnoremap wh <c-w>h
 nnoremap w<left> <c-w>h
 nnoremap wj <c-w>j
