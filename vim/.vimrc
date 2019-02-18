@@ -63,12 +63,21 @@ endif
 colorscheme jellybeans
 
 " Airline
-" tab line
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
 
 " Nerdtree
 " open when opening vim without a path sepcified
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+let NERDTreeShowHidden=1
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "~",
+    \ "Staged"    : "*",
+    \ "Untracked" : "",
+    \ "Renamed"   : "r",
+    \ "Unmerged"  : "!",
+    \ "Deleted"   : "-",
+    \ "Dirty"     : "~",
+    \ "Clean"     : "",
+    \ 'Ignored'   : "",
+    \ "Unknown"   : "?"
+    \ }
