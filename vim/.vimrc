@@ -41,8 +41,8 @@ autocmd InsertLeave * set iminsert=0
 
 " Tab things
 au BufAdd,BufNewFile * nested tab sball
-nnoremap <leader>b :tabl<CR>
-nnoremap <leader>n :tabn<CR>
+nnoremap <leader>j :tabp<CR>
+nnoremap <leader>k :tabn<CR>
 " alias tabnew to tn
 cnoreabbrev <expr> tn getcmdtype() == ":" && getcmdline() == 'tn' ? 'tabnew' : 'tn'
 " alias tabedit to te
