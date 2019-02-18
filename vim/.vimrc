@@ -75,6 +75,12 @@ endif
 
 " Colourscheme
 colorscheme jellybeans
+set background=dark
+let g:enable_bold_font = 1
+let g:enable_italic_font = 1
+let g:hybrid_transparent_background = 1
+highlight LineNr ctermfg = 7
+highlight ColorColumn ctermbg = 7
 
 " Airline
 
