@@ -120,3 +120,6 @@ let g:syntastic_check_on_wq = 0
 
 " Gitgutter
 set updatetime=100
+
+" Tagbar
+nnoremap <leader>l :TagbarToggle<cr>
