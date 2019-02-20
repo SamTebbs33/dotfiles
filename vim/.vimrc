@@ -15,7 +15,6 @@ syntax on
 filetype plugin indent on
 Helptags
 set visualbell
-set paste
 set hlsearch
 
 let mapleader = " "
