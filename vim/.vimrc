@@ -117,3 +117,7 @@ let g:syntastic_check_on_wq = 0
 
 " Gitgutter
 set updatetime=100
+
+" Filetype-specific
+autocmd FileType c setlocal expandtab shiftwidth=4 autoindent
+autocmd FileType asm setlocal noexpandtab shiftwidth=4 autoindent tabstop=4
