@@ -1,6 +1,18 @@
-set PATH $HOME/bin/gcc/build-gcc-8.2.0/bin $PATH
-set PATH $HOME/bin/grub/bin $PATH
-set PATH $HOME/bin/binutils/bin $PATH
+if [ -d $HOME/bin/gcc/build-gcc-8.2.0/bin ]
+	set PATH $HOME/bin/gcc/build-gcc-8.2.0/bin $PATH
+end
+if [ -d $HOME/bin/grub/build/bin ]
+	set PATH $HOME/bin/grub/build/bin $PATH
+end
+if [ -d $HOME/bin/binutils/bin ]
+	set PATH $HOME/bin/binutils/bin $PATH
+end
+if [ -d $HOME/bin/binutils/i686-elf/build/bin ]
+	set PATH $HOME/bin/binutils/i686-elf/build/bin $PATH
+end
+if [ -d $HOME/bin/gcc/i686-elf/build/bin ]
+	set PATH $HOME/bin/gcc/i686-elf/build/bin $PATH
+end
 if hostname | grep "e120" > /dev/null
   set DEBUG_FLAGS "-dp" "-da" "--save-temps -S"
   set WORKSPACE_HOME "/home/$USER/gnu-work/workspace"
