@@ -69,7 +69,7 @@ autocmd BufEnter ~/dotfiles/i3/.config/i3/config set ft=i3config
 
 " Change vim shell to the standard shell
 if &shell =~# 'fish$'
-	set shell=sh
+  set shell=sh
 endif
 
 " Colourscheme
@@ -96,17 +96,17 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 nnoremap <leader>t :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "~",
-    \ "Staged"    : "*",
-    \ "Untracked" : "",
-    \ "Renamed"   : "r",
-    \ "Unmerged"  : "!",
-    \ "Deleted"   : "-",
-    \ "Dirty"     : "~",
-    \ "Clean"     : "",
-    \ 'Ignored'   : '$',
-    \ "Unknown"   : "?"
-    \ }
+  \ "Modified"  : "~",
+  \ "Staged"    : "*",
+  \ "Untracked" : "",
+  \ "Renamed"   : "r",
+  \ "Unmerged"  : "!",
+  \ "Deleted"   : "-",
+  \ "Dirty"     : "~",
+  \ "Clean"     : "",
+  \ 'Ignored'   : '$',
+  \ "Unknown"   : "?"
+  \ }
 
 " Syntastic
 set statusline+=%#warningmsg#
