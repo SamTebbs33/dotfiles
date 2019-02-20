@@ -15,7 +15,6 @@ syntax on
 filetype plugin indent on
 Helptags
 set visualbell
-set paste
 set hlsearch
 
 let mapleader = " "
@@ -70,7 +69,7 @@ autocmd BufEnter ~/dotfiles/i3/.config/i3/config set ft=i3config
 
 " Change vim shell to the standard shell
 if &shell =~# 'fish$'
-	set shell=sh
+  set shell=sh
 endif
 
 " Colourscheme
@@ -83,6 +82,12 @@ highlight LineNr ctermfg = 7
 highlight ColorColumn ctermbg = 7
 
 " Airline
+let g:airline_powerline_fonts = 1
+if !exists('g:airline_symbols')
+      let g:airline_symbols = {}
+endif
+let g:airline_symbols.space = "\ua0"
+let g:airline_theme="jellybeans"
 
 " Nerdtree
 " open when opening vim without a path sepcified
@@ -91,17 +96,17 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 nnoremap <leader>t :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "~",
-    \ "Staged"    : "*",
-    \ "Untracked" : "",
-    \ "Renamed"   : "r",
-    \ "Unmerged"  : "!",
-    \ "Deleted"   : "-",
-    \ "Dirty"     : "~",
-    \ "Clean"     : "",
-    \ 'Ignored'   : '$',
-    \ "Unknown"   : "?"
-    \ }
+  \ "Modified"  : "~",
+  \ "Staged"    : "*",
+  \ "Untracked" : "",
+  \ "Renamed"   : "r",
+  \ "Unmerged"  : "!",
+  \ "Deleted"   : "-",
+  \ "Dirty"     : "~",
+  \ "Clean"     : "",
+  \ 'Ignored'   : '$',
+  \ "Unknown"   : "?"
+  \ }
 
 " Syntastic
 set statusline+=%#warningmsg#
@@ -121,3 +126,6 @@ set updatetime=100
 " Filetype-specific
 autocmd FileType c setlocal expandtab shiftwidth=4 autoindent
 autocmd FileType asm setlocal noexpandtab shiftwidth=4 autoindent tabstop=4
+
+" Tagbar
+nnoremap <leader>l :TagbarToggle<cr>
