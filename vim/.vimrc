@@ -127,7 +127,7 @@ set updatetime=100
 
 " Filetype-specific
 autocmd FileType c setlocal expandtab shiftwidth=4 autoindent
-autocmd FileType asm setlocal noexpandtab shiftwidth=4 autoindent tabstop=4
+autocmd FileType asm setlocal expandtab shiftwidth=4 autoindent tabstop=4
 
 " Tagbar
 nnoremap <leader>l :TagbarToggle<cr>
