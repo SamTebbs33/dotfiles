@@ -86,8 +86,10 @@ let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
       let g:airline_symbols = {}
 endif
+let g:airline_symbols.branch = '⎇'
 let g:airline_symbols.space = "\ua0"
 let g:airline_theme="jellybeans"
+let g:airline_skip_empty_sections=1
 
 " Nerdtree
 " open when opening vim without a path sepcified
