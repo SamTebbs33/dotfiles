@@ -131,3 +131,6 @@ autocmd FileType asm setlocal expandtab shiftwidth=4 autoindent tabstop=4
 
 " Tagbar
 nnoremap <leader>l :TagbarToggle<cr>
+
+" Hex mode
+nnoremap <leader>h :%!xxd<cr>
