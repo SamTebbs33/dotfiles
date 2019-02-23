@@ -120,7 +120,7 @@ let g:syntastic_c_config_file=".syntastic_c_config"
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+let g:syntastic_check_on_wq = 1
 
 " Gitgutter
 set updatetime=100
@@ -134,3 +134,8 @@ nnoremap <leader>l :TagbarToggle<cr>
 
 " Hex mode
 nnoremap <leader>h :%!xxd<cr>
+
+" UltiSnips
+let g:UltiSnipsExpandTrigger="<c-space>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
