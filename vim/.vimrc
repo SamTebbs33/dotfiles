@@ -28,8 +28,8 @@ set backspace=indent,eol,start
 nnoremap <leader>r :so ~/.vimrc<CR>
 " Select all
 nnoremap <leader>a ggVGG
-nnoremap <leader><Down> <PageDown>
-nnoremap <leader><Up> <PageUp>
+nnoremap <C-down> <C-e>
+nnoremap <C-up> <C-y><up>
 " Window movement
 nnoremap wq <c-w>q
 nnoremap wh <c-w>h
