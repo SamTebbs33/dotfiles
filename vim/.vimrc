@@ -43,6 +43,8 @@ nnoremap w<right> <c-w>l
 
 " Listing buffers
 nnoremap <tab> :buffers<CR>:buffer<Space>
+" Buffer quickswitch
+nnoremap <leader>b :b#<CR>
 
 " Automatic toggling of hybrid line numbers
 set number relativenumber
