@@ -69,6 +69,7 @@ function gconf
 end
 mk_abbrev gdiff "git diff"
 mk_abbrev gd "git diff"
+mk_abbrev gdc "git diff --cached"
 function gsearch -a filter -d "Show all commits whose message contains a certain string"
 	git show :/$filter
 end
