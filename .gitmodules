@@ -1,6 +1,3 @@
-[submodule "i3/polybar-scripts"]
-	path = i3/polybar-scripts
-	url = git@github.com:SamTebbs33/polybar-scripts.git
 [submodule "vim/.vim/bundle/jellybeans.vim"]
 	path = vim/.vim/bundle/jellybeans.vim
 	url = https://github.com/nanotech/jellybeans.vim
@@ -9,16 +6,16 @@
 	url = https://github.com/vim-airline/vim-airline
 [submodule "vim/.vim/bundle/nerdtree"]
 	path = vim/.vim/bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
+	url = https://github.com/scrooloose/nerdtree
 [submodule "vim/.vim/bundle/nerdtree-git-plugin"]
 	path = vim/.vim/bundle/nerdtree-git-plugin
 	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
 [submodule "vim/.vim/bundle/syntastic"]
 	path = vim/.vim/bundle/syntastic
-	url = https://github.com/vim-syntastic/syntastic.git
+	url = https://github.com/vim-syntastic/syntastic
 [submodule "vim/.vim/bundle/vim-gitgutter"]
 	path = vim/.vim/bundle/vim-gitgutter
-	url = git://github.com/airblade/vim-gitgutter.git
+	url = https://github.com/airblade/vim-gitgutter
 [submodule "vim/.vim/bundle/nerdtree-grep-plugin"]
 	path = vim/.vim/bundle/nerdtree-grep-plugin
 	url = https://github.com/MarSoft/nerdtree-grep-plugin.git
