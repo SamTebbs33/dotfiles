@@ -145,3 +145,6 @@ nnoremap <leader>h :%!xxd<cr>
 let g:UltiSnipsExpandTrigger="<c-space>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+" ctrlp
+let g:ctrlp_custom_ignore = "\.o$"
