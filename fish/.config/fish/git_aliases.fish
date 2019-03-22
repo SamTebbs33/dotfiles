@@ -76,6 +76,9 @@ end
 mk_abbrev gshow "git show"
 mk_abbrev gissues "git browse -- issues"
 mk_abbrev gwiki "git browse -- wiki"
+
+mk_abbrev gflow "git flow"
+
 function gclonehttp -a repo -a dest
 	git clone https://github.com/$repo $dest
 end
