@@ -49,3 +49,6 @@
 [submodule "vim/.vim/bundle/vim-fish"]
 	path = vim/.vim/bundle/vim-fish
 	url = https://github.com/dag/vim-fish
+[submodule "vim/.vim/bundle/i3config.vim"]
+	path = vim/.vim/bundle/i3config.vim
+	url = https://github.com/mboughaba/i3config.vim
