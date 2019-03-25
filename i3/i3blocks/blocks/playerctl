@@ -1,37 +1,29 @@
 #!/bin/bash
 # Based on https://aur.archlinux.org/packages/playerctl/
 
-INSTANCE="${BLOCK_INSTANCE}"
-
 if [[ "${BLOCK_BUTTON}" -eq 1 ]]; then
     $(playerctl ${ARGUMENTS} play-pause)
 elif [[ "${BLOCK_BUTTON}" -eq 3 ]]; then
     $(playerctl ${ARGUMENTS} next)
 fi
 
-if [[ "${INSTANCE}" != "" ]]; then
-  ARGUMENTS="--player ${INSTANCE}"
-fi
+status=$(playerctl ${ARGUMENTS} status)
+title=$(playerctl ${ARGUMENTS} metadata title)
+album=$(playerctl ${ARGUMENTS} metadata album)
+artist=$(playerctl ${ARGUMENTS} metadata artist)
 
-ICON_PLAY=""
-ICON_PAUSE=""
-ICON_STOP="≠"
-CUR_ICON=""
-
-PLAYER_STATUS=$(playerctl ${ARGUMENTS} status)
-INFO_TITLE=$(playerctl ${ARGUMENTS} metadata title)
-INFO_ALBUM=$(playerctl ${ARGUMENTS} metadata album)
-INFO_ARTIST=$(playerctl ${ARGUMENTS} metadata artist)
-
-if [[ "${PLAYER_STATUS}" = "Paused" ]]; then
-  CUR_ICON="${ICON_PAUSE}"
-elif [[ "${PLAYER_STATUS}" = "Playing" ]]; then
-  CUR_ICON="${ICON_PLAY}"
+if [[ "$status" = "Playing" ]]; then
+  colour="cyan"
 else
-  CUR_ICON="${ICON_STOP}"
+  colour="orange"
 fi
 
-if [[ "${INFO_TITLE}" != "" ]] && [[ "${INFO_ARTIST}" != "" ]]; then
-  str="${CUR_ICON} ${INFO_TITLE} - ${INFO_ARTIST}"
-  echo $str
+if [[ "$title" != "" ]]; then
+  str="<span foreground='$colour'>$title"
+  if [[ "$artist" != "" ]]; then
+    str+=" - $artist"
+  elif [[ "$album" != "" ]]; then
+    str+=" - $album"
+  fi
+  echo "$str</span>"
 fi

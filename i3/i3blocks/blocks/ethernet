@@ -1,0 +1,20 @@
+#!/bin/bash
+
+ifc=$(ifquery --list | grep -P "eno|eth")
+
+if [[ "$ifc" != "" ]]; then
+  status=$(cat /sys/class/net/"$ifc"/operstate)
+  ip=""
+
+  case $status in
+    "up")
+      colour="cyan"
+      ifcip=$(ifconfig "$ifc" | grep -P "inet addr:(\d+\.\d+\.\d+\.\d+)" -wo | grep -P "\d+\.\d+\.\d+\.\d+" -wo)
+    
+      if [[ $ifcip != "" ]]; then
+        ip=" @ $ifcip"
+      fi;;
+    "down") colour="orange";;
+  esac
+  echo "<span foreground='$colour'>$status</span>$ip"
+fi
