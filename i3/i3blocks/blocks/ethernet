@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ifc=$(ifquery --list | grep -P "eno|eth")
+ifc=$(ifconfig | grep -woP "(eno|eth)\d+")
 
 if [[ "$ifc" != "" ]]; then
   status=$(cat /sys/class/net/"$ifc"/operstate)
