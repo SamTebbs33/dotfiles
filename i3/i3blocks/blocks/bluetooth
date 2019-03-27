@@ -4,7 +4,7 @@ if [[ "${BLOCK_BUTTON}" -eq 1 ]]; then
   bluetooth toggle > /dev/null
 fi
 
-status=$(bluetooth | grep -wo 'on')
+status=$(bluetooth | grep -P -wo "on|off")
 
 if [[ "$status" != "" ]]; then
   if [[ "$status" == "on" ]]; then
