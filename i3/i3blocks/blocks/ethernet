@@ -12,7 +12,7 @@ if [[ "$ifc" != "" ]]; then
       ifcip=$(ifconfig "$ifc" | grep -P "inet addr:(\d+\.\d+\.\d+\.\d+)" -wo | grep -P "\d+\.\d+\.\d+\.\d+" -wo)
     
       if [[ $ifcip != "" ]]; then
-        ip=" @ <span foreground='cyan'>$ifcip</span>"
+        ip=" @ $ifcip"
       fi;;
     "down") colour="orange";;
   esac
