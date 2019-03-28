@@ -1,29 +1,38 @@
 #!/bin/bash
 
-ifc=$(ifquery --list | grep "wlan")
+ifc=$(ifconfig | grep -woP "wl(\d|[a-zA-Z])+")
 
 if [[ "$ifc" != "" ]]; then
-  strength=$(expr $(nmcli -t -f active,ssid,signal dev wifi|grep yes|cut -d':' -f3) / 20)
+  strength=$(expr $(nmcli -t -f active,ssid,signal dev wifi|grep yes|cut -d':' -f3) / 10)
   ssid=$(nmcli -t -f ssid dev wifi)
-  ip=$(ifconfig $ifc)
+  if [[ "$ssid" != "" ]]; then
+    ssid="<span foreground='cyan'>$ssid</span> "
+  fi
+
+  ip=""
   ipregex="inet addr:(\d+\.\d+\.\d+\.\d+)" 
 
-  ifcip=$(ifconfig "$ifc" | grep -P "inet addr:(\d+\.\d+\.\d+\.\d+)" -wo | grep -P "\d+\.\d+\.\d+\.\d+" -wo)
+  ifcip=$(ifconfig "$ifc" | grep -P "inet (\d+\.\d+\.\d+\.\d+)" -wo | grep -P "\d+\.\d+\.\d+\.\d+" -wo)
 
   if [[ $ifcip != "" ]]; then
-    ip=" @ <span foreground='cyan'>$ifcip</span>"
+    ip=" @ $ifcip"
   fi
 
   colour="cyan"
   case $strength in
     1) bars="/----";;
-    2) bars="//---";;
-    3) bars="///--";;
-    4) bars="////-";;
-    5) bars="/////";;
+    2) bars="/----";;
+    3) bars="//---";;
+    4) bars="//---";;
+    5) bars="///--";;
+    6) bars="///--";;
+    7) bars="////-";;
+    8) bars="////-";;
+    9) bars="/////";;
+    10) bars="/////";;
     *)
       bars="-----"
       colour="orange";;
   esac
-  echo "$ssid [<span foreground='$colour'>$bars</span>]$ip"
+  echo "$ssid [<span foreground='$colour'>$bars</span>] $ip"
 fi
