@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ifc=$(ifconfig | grep -woP "(eno|eth)\d+")
+ifc=$(ifconfig | grep -woP "(en|eth)(\d|[a-zA-Z])+:" | grep -woP "(en|eth)(\d|[a-zA-Z])+")
 
 if [[ "$ifc" != "" ]]; then
   status=$(cat /sys/class/net/"$ifc"/operstate)
@@ -9,7 +9,7 @@ if [[ "$ifc" != "" ]]; then
   case $status in
     "up")
       colour="cyan"
-      ifcip=$(ifconfig "$ifc" | grep -P "inet addr:(\d+\.\d+\.\d+\.\d+)" -wo | grep -P "\d+\.\d+\.\d+\.\d+" -wo)
+      ifcip=$(ifconfig "$ifc" | grep -P "inet (\d+\.\d+\.\d+\.\d+)" -wo | grep -P "\d+\.\d+\.\d+\.\d+" -wo)
     
       if [[ $ifcip != "" ]]; then
         ip=" @ $ifcip"
