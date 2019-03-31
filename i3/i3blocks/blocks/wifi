@@ -3,7 +3,7 @@
 ifc=$(ifconfig | grep -woP "wl(\d|[a-zA-Z])+")
 
 if [[ "$ifc" != "" ]]; then
-  ssid=$(nmcli -t -f active,ssid dev wifi | egrep "^yes" | cut -d\' -f2)
+  ssid=$(nmcli -t -f active,ssid dev wifi | egrep "^yes" | cut -c 5-)
   if [[ "$ssid" != "" ]]; then
     strength=$(expr $(nmcli -t -f active,ssid,signal dev wifi | grep yes|cut -d':' -f3) / 10)
     if [[ "$ssid" != "" ]]; then
