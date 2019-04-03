@@ -10,16 +10,7 @@ if [[ "$ifc" != "" ]]; then
       ssid="<span foreground='cyan'>$ssid</span> "
     fi
   
-    ip=""
-    ipregex="inet addr:(\d+\.\d+\.\d+\.\d+)" 
-  
-    ifcip=$(ifconfig "$ifc" | grep -P "inet (\d+\.\d+\.\d+\.\d+)" -wo | grep -P "\d+\.\d+\.\d+\.\d+" -wo)
-  
-    if [[ $ifcip != "" ]]; then
-      ip=" @ $ifcip"
-    fi
-  
-    colour="cyan"
+    colour="light green"
     case $strength in
       1) bars="/----";;
       2) bars="/----";;
@@ -35,7 +26,7 @@ if [[ "$ifc" != "" ]]; then
         bars="-----"
         colour="orange";;
     esac
-    echo "$ssid [<span foreground='$colour'>$bars</span>] $ip"
+    echo "$ssid [<span foreground='$colour'>$bars</span>]"
   else
     echo "<span foreground='orange'>none</span>"
   fi

@@ -1,35 +1,36 @@
 #!/bin/bash
 
-BATTERY=$BLOCK_INSTANCE
-BATTERY_INFO=$(acpi -b | grep "Battery ${BATTERY}")
-if [[ $BATTERY_INFO = *"No support"* ]]; then
-  echo "No bat"
-  exit 0
+battery=$BLOCK_INSTANCE
+battery_info=$(acpi -b | grep "Battery $battery")
+if [[ $battery_info = *"No support"* ]]; then
+	exit 0
 fi
-BATTERY_STATE=$(echo "${BATTERY_INFO}" | grep -wo "Full\|Charging\|Discharging")
-BATTERY_POWER=$(echo "${BATTERY_INFO}" | grep -o '[0-9]\+%' | tr -d '%')
+state=$(echo "$battery_info" | grep -wo "Full\|Charging\|Discharging")
+power=$(echo "$battery_info" | grep -o '[0-9]\+%' | tr -d '%')
+strength=$(expr $power / 10)
 
-URGENT_VALUE=10
+low_value=2
+colour="light green"
 
-if [[ "${BATTERY_POWER}" != "" ]]; then
+if [[ "$strength" != "" ]]; then
 
-  if [[ "${BATTERY_STATE}" = "Charging" ]]; then
-    icon=""
-  elif [[ "${BATTERY_POWER}" -ge "90" ]]; then
-    icon=""
-  elif [[ "${BATTERY_POWER}" -ge "65" ]]; then
-    icon=""
-  elif [[ "${BATERY_POWER}" -ge "40" ]]; then
-    icon=""
-  elif [[ "${BATTERY_POWER}" -ge "15" ]]; then
-    icon=""
-  else
-    icon=""
-  fi
-
-  echo "$icon ${BATTERY_POWER}%"
-
-  if [[ "${BATTERY_POWER}" -le "${URGENT_VALUE}" ]]; then
-    exit 33
-  fi
+    case $strength in
+      1) bars="/----";;
+      2) bars="/----";;
+      3) bars="//---";;
+      4) bars="//---";;
+      5) bars="///--";;
+      6) bars="///--";;
+      7) bars="////-";;
+      8) bars="////-";;
+      9) bars="/////";;
+      10) bars="/////";;
+      *)
+        bars="-----"
+        colour="orange";;
+    esac
+    if [[ "$strength" -le "$low_value" ]]; then
+      colour="red"
+    fi
+    echo "[<span foreground='$colour'>$bars</span>] $power%"
 fi
