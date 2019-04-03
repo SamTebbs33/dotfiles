@@ -52,3 +52,6 @@
 [submodule "vim/.vim/bundle/i3config.vim"]
 	path = vim/.vim/bundle/i3config.vim
 	url = https://github.com/mboughaba/i3config.vim
+[submodule "vim/.vim/bundle/vim-localvimrc"]
+	path = vim/.vim/bundle/vim-localvimrc
+	url = https://github.com/embear/vim-localvimrc
