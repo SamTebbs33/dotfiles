@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ifc=$(ifconfig | grep -woP "(en|eth)(\d|[a-zA-Z])+:" | grep -woP "(en|eth)(\d|[a-zA-Z])+")
+ifc=$(ifconfig | grep -woP "(en|eth)(\d|[a-zA-Z])+" | head -n1)
 
 if [[ "$ifc" != "" ]]; then
   status=$(cat /sys/class/net/"$ifc"/operstate)
