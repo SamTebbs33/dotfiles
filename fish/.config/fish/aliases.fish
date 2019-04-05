@@ -1,8 +1,4 @@
 # Vim
-alias v 'mvim -v'
-alias mkvim 'cd ~/Documents/Programming/vim/ sh mkvim.sh'
-alias vimrc 'vim .vimrc'
-alias vimbp 'vim ~/.bash_profile'
 
 # Tmux
 alias tmls "tmux ls"
