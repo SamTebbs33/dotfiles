@@ -1,4 +1,14 @@
 # Vim
+function vima
+	set i 0
+	for x in $argv[2..-1]
+		# Convert counter to mark character
+		set mark (echo -e "\x"(printf "%x" (expr $i + 97)))
+		set marks "-c "$x"ma "$mark $marks
+		set i (expr $i + 1)
+	end
+	vim $argv[1] $marks
+end
 
 # Tmux
 alias tmls "tmux ls"
