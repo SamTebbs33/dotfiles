@@ -1,1 +1,0 @@
-alias omfi "omf install"
