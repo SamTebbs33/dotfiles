@@ -10,12 +10,6 @@ function vima
 	vim $argv[1] $marks
 end
 
-# Tmux
-alias tmls "tmux ls"
-alias tma "tmux attach -t"
-alias tmnew "tmux new -s"
-alias tmrename "tmux rename-session -t"
-
 # Programs
 alias fnd "find . -name "
 alias grun 'java org.antlr.v4.runtime.misc.TestRig'
