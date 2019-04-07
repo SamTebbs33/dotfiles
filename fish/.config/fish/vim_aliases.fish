@@ -1,6 +1,0 @@
-alias vimjava="vim -u ~/Documents/Programming/vim/java/.vim/.vimrc"
-alias vimc++="vim -u ~/Documents/Programming/vim/c++/.vim/.vimrc"
-alias vimc="vim -u ~/Documents/Programming/vim/c/.vim/.vimrc"
-alias vimhmtl="vim -u ~/Documents/Programming/vim/hmtl/.vim/.vimrc"
-alias vimhtml="vim -u ~/Documents/Programming/vim/html/.vim/.vimrc"
-alias vimjava="vim -u ~/Documents/Programming/vim/java/.vim/.vimrc"
