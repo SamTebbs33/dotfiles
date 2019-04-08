@@ -93,24 +93,33 @@ let g:airline_symbols.space = "\ua0"
 let g:airline_theme="jellybeans"
 let g:airline_skip_empty_sections=1
 
-" Nerdtree
-" open when opening vim without a path sepcified
+" netrw
+let g:netrw_liststyle = 3 " Tree mode. 0=thin, 1=long, 2=wide
+let g:netrw_banner = 0 " Disable banner
+let g:netrw_browse_split = 4 " Open files in vertical split. 1=h split, 3=new tab, 4=prev window
+let g:netrw_winsize = 25 " Set width to 25% of page
+" Open netrw in leftmost window
+function! ToggleNetrw()
+  if exists("t:expl_buf_num")
+      let expl_win_num = bufwinnr(t:expl_buf_num)
+      if expl_win_num != -1
+          let cur_win_nr = winnr()
+          exec expl_win_num . 'wincmd w'
+          close
+          exec cur_win_nr . 'wincmd w'
+          unlet t:expl_buf_num
+      else
+          unlet t:expl_buf_num
+      endif
+  else
+      exec '1wincmd w'
+      Vexplore
+      let t:expl_buf_num = bufnr("%")
+  endif
+endfunction
+nnoremap <leader>t :call ToggleNetrw()<CR>
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-nnoremap <leader>t :NERDTreeToggle<CR>
-let NERDTreeShowHidden=1
-let g:NERDTreeIndicatorMapCustom = {
-  \ "Modified"  : "~",
-  \ "Staged"    : "*",
-  \ "Untracked" : "",
-  \ "Renamed"   : "r",
-  \ "Unmerged"  : "!",
-  \ "Deleted"   : "-",
-  \ "Dirty"     : "~",
-  \ "Clean"     : "",
-  \ 'Ignored'   : '$',
-  \ "Unknown"   : "?"
-  \ }
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | call ToggleNetrw() | endif
 
 " Syntastic
 set statusline+=%#warningmsg#
