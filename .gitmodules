@@ -49,3 +49,6 @@
 [submodule "vim/.vim/bundle/vim-signature"]
 	path = vim/.vim/bundle/vim-signature
 	url = https://github.com/kshenoy/vim-signature
+[submodule "vim/.vim/bundle/vim-vinegar"]
+	path = vim/.vim/bundle/vim-vinegar
+	url = https://github.com/tpope/vim-vinegar.git
