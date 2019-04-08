@@ -94,7 +94,7 @@ let g:airline_theme="jellybeans"
 let g:airline_skip_empty_sections=1
 
 " netrw
-let g:netrw_liststyle = 3 " Tree mode. 0=thin, 1=long, 2=wide
+let g:netrw_liststyle = 0 " Tree mode. 0=thin, 1=long, 2=wide
 let g:netrw_banner = 0 " Disable banner
 let g:netrw_browse_split = 4 " Open files in vertical split. 1=h split, 3=new tab, 4=prev window
 let g:netrw_winsize = 25 " Set width to 25% of page
