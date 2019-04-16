@@ -238,9 +238,6 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle && pkill
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
-# Touchpad controls
-bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
-
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play-pause && pkill -RTMIN+2 i3blocks
 #bindsym XF86AudioPause exec playerctl pause
@@ -248,6 +245,6 @@ bindsym XF86AudioNext exec playerctl next && pkill -RTMIN+2 i3blocks
 bindsym XF86AudioPrev exec playerctl previous && pkill -RTMIN+2 i3blocks
 
 # Trackpad settings
-exec xinput set-prop 13 296 1 # Tap to click
-exec xinput set-prop 13 278 1 # Natural scrolling
-exec xinput set-prop 13 287 1 # Sensitivity
+exec xinput set-prop 13 305 1 # Tap to click
+exec xinput set-prop 13 287 1 # Natural scrolling
+exec xinput set-prop 13 296 0.7 # Sensitivity
