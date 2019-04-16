@@ -32,6 +32,7 @@ if [ (uname) = "Linux" ]
 	alias arm "sudo apt-get remove"
 	alias aget "sudo apt-get"
 	alias ageti "sudo apt-get install"
+	alias paci "sudo pacman -Su"
 else
 	alias cat "ccat"
 end
