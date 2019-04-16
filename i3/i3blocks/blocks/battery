@@ -32,5 +32,8 @@ if [[ "$strength" != "" ]]; then
     if [[ "$strength" -le "$low_value" ]]; then
       colour="red"
     fi
+    if [[ "$state" == "Charging" ]]; then
+	power="⚡ $power"
+    fi
     echo "[<span foreground='$colour'>$bars</span>] $power%"
 fi
