@@ -245,6 +245,6 @@ bindsym XF86AudioNext exec playerctl next && pkill -RTMIN+2 i3blocks
 bindsym XF86AudioPrev exec playerctl previous && pkill -RTMIN+2 i3blocks
 
 # Trackpad settings
-exec xinput set-prop 13 305 1 # Tap to click
-exec xinput set-prop 13 287 1 # Natural scrolling
-exec xinput set-prop 13 296 0.7 # Sensitivity
+exec xinput set-prop 13 304 1
+exec xinput set-prop 13 286 1
+exec xinput set-prop 13 295 0.6
