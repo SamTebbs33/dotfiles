@@ -22,7 +22,7 @@ mk_abbrev guo "git push origin"
 mk_abbrev gp "git pull"
 mk_abbrev gpo "git pull origin"
 mk_abbrev gs "git status -sb"
-mk_abbrev gl "git log --decorate --oneline"
+mk_abbrev gl "git log --decorate --oneline --graph"
 function gignore -a file
 	echo "$file" >> .gitignore
 end
