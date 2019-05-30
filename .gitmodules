@@ -55,3 +55,6 @@
 [submodule "vim/.vim/bundle/vim-surround"]
 	path = vim/.vim/bundle/vim-surround
 	url = https://github.com/tpope/vim-surround
+[submodule "vim/.vim/bundle/vim-markdown-preview"]
+	path = vim/.vim/bundle/vim-markdown-preview
+	url = https://github.com/JamshedVesuna/vim-markdown-preview
