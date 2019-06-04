@@ -157,7 +157,7 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " ctrlp
-let g:ctrlp_custom_ignore = "\.o$"
+"let g:ctrlp_custom_ignore = "\.o$"
 
 " vim-localvimrc
 let g:localvimrc_sandbox = 0
