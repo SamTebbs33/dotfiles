@@ -21,9 +21,9 @@ fi
 if [[ "$title" != "" ]]; then
   str="<span foreground='$colour'>$title"
   if [[ "$artist" != "" ]]; then
-    str+=" - $artist"
+    str="$str - $artist"
   elif [[ "$album" != "" ]]; then
-    str+=" - $album"
+    str="$str - $album"
   fi
   echo "$str</span>"
 fi
