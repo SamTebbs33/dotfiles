@@ -79,6 +79,14 @@ mk_abbrev gwiki "git browse -- wiki"
 
 mk_abbrev gflow "git flow"
 
+function gff -a remote -d "Fast forward to a remote, default is origin"
+	if [ "$remote" = "" ]
+		set remote "origin"
+	end
+	set -l branch (git branch ^/dev/null | sed -n '/\* /s///p')
+	git merge --ff-only $remote/$branch
+end
+
 function gclonehttp -a repo -a dest
 	git clone https://github.com/$repo $dest
 end
