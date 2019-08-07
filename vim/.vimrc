@@ -140,6 +140,8 @@ let g:syntastic_mode_map = {
 
 " Gitgutter
 set updatetime=100
+let g:gitgutter_realtime=0
+let g:gitgutter_eager=0
 
 " Filetype-specific
 autocmd FileType c setlocal expandtab shiftwidth=4 autoindent
@@ -157,7 +159,7 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " ctrlp
-"let g:ctrlp_custom_ignore = "\.o$"
+let g:ctrlp_custom_ignore = "zig-cache"
 
 " vim-localvimrc
 let g:localvimrc_sandbox = 0
