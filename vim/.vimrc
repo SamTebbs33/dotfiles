@@ -172,3 +172,8 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 " Zig
 let g:zig_fmt_autosave = 0
+
+" Persistent undo
+"persistent undo
+set undofile
+set undodir=~/.vim/undo-dir
