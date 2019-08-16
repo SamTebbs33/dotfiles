@@ -18,6 +18,8 @@ set visualbell
 set hlsearch
 
 let mapleader = " "
+nnoremap <leader>o o<esc>
+nnoremap <leader>O O<esc>
 nnoremap <leader>c "*yy
 nnoremap <leader>q :q<CR>
 nnoremap <leader>w :w<CR>
