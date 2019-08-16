@@ -44,6 +44,9 @@ mk_abbrev gstash "git stash"
 # Stash unstaged changes only
 mk_abbrev gstashu "git commit -m WIP; git add .; git stash; git reset --soft HEAD^"
 mk_abbrev gstasha "git stash apply"
+mk_abbrev gclean "git clean -fd"
+mk_abbrev gcleanf "git clean -f"
+mk_abbrev gcleand "git clean -d"
 function gwip -a wipmsg -d "Make a WIP commit with all changes staged"
 	ga -A
 	if count $wipmsg > /dev/null
