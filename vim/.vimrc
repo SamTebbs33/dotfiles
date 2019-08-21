@@ -43,6 +43,9 @@ nnoremap w<up> <c-w>k
 nnoremap wl <c-w>l
 nnoremap w<right> <c-w>l
 
+" Possibly fast syntax highlighting with the old regex engine
+set re=1
+
 " Listing buffers
 nnoremap <tab> :buffers<CR>:buffer<Space>
 " Buffer quickswitch
