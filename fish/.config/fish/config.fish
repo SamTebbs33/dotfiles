@@ -1,6 +1,6 @@
 # Path
 set PATH $HOME/bin $PATH
-set PATH $HOME/repos/z88dk/bin $PATH
+set PATH $HOME/repos/zig/build $PATH
 
 # z88dk variables
 set ZCCCFG $HOME/repos/z88dk/lib/config
