@@ -37,9 +37,6 @@ else
 	alias cat "ccat"
 end
 
-# Path
-set PATH "/home/$USER/bin" $PATH
-
 # grep
 function grp
     set branch (git symbolic-ref -q --short HEAD)
