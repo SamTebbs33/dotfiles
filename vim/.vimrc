@@ -125,7 +125,8 @@ function! ToggleNetrw()
 endfunction
 nnoremap <leader>t :call ToggleNetrw()<CR>
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | call ToggleNetrw() | endif
+" Open netrw if no files were specified in the cmd line
+"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | call ToggleNetrw() | endif
 
 " Syntastic
 set statusline+=%#warningmsg#
