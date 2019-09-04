@@ -1,7 +1,3 @@
-function mk_abbrev
-	set -U fish_user_abbreviations $fish_user_abbreviations "$argv[1]=$argv[2]"
-end
-
 mk_abbrev gca "git commit --amend"
 mk_abbrev gserve "git daemon --reuseaddr --verbose  --base-path=. --export-all"
 mk_abbrev gr "git revert"
