@@ -62,3 +62,7 @@ alias rmi "rm -ri *"
 function lines -a file -a from -a num_lines
     tail $file -n+$from | head -n$num_lines
 end
+
+# Tar
+mk_abbrev "tarx" "tar -xvf"
+mk_abbrev "tarc" "tar -cvf"
