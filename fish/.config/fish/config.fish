@@ -9,6 +9,7 @@ function mk_abbrev
 	set -U fish_user_abbreviations $fish_user_abbreviations "$argv[1]=$argv[2]"
 end
 
+set fish_user_abbreviations ""
 
 for file in ~/.config/fish/*.fish
 	set filename (basename $file)
