@@ -82,6 +82,8 @@ if &shell =~# 'fish$'
   set shell=sh
 endif
 
+set wildignore+=*.o,zig-cache
+
 " Colourscheme
 colorscheme jellybeans
 set background=dark
@@ -168,7 +170,8 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " ctrlp
-let g:ctrlp_custom_ignore = "zig-cache"
+let g:ctrlp_max_files=0
+let g:ctrlp_max_depth=40
 
 " vim-localvimrc
 let g:localvimrc_sandbox = 0
@@ -183,6 +186,5 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 let g:zig_fmt_autosave = 1
 
 " Persistent undo
-"persistent undo
 set undofile
 set undodir=~/.vim/undo-dir
