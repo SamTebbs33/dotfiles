@@ -45,11 +45,11 @@ end
 
 # grep
 function grp
-    set branch (git symbolic-ref -q --short HEAD)
-    if [ $branch != "fatal: Not a git repository (or any of the parent directories): .git" ]
+    git symbolic-ref -q --short HEAD 2> /dev/null
+    if [ "$status" -eq 0 ]
         git grep -n $argv
     else
-        grep -n $argv
+        grep -n $argv *
     end
 end
 alias grpi "grp -ni"
