@@ -9,6 +9,7 @@ function vima
 	end
 	vim $argv[1] $marks
 end
+alias vim nvim
 
 # Programs
 function fnd -a pattern -a path
