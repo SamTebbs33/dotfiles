@@ -43,6 +43,9 @@ nnoremap w<up> <c-w>k
 nnoremap wl <c-w>l
 nnoremap w<right> <c-w>l
 
+" Paste without overwriting the default register
+vnoremap p "_dP
+
 " Match angled brackets too
 set matchpairs+=<:>
 
