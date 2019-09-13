@@ -50,7 +50,7 @@ function grp
     if [ "$status" -eq 0 ]
         git grep -n $argv
     else
-        grep -n $argv *
+        grep -n -r $argv *
     end
 end
 alias grpi "grp -ni"
