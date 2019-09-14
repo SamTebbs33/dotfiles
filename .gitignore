@@ -3,3 +3,4 @@ fish/.config/fish/fishd*
 vim/.vim/.netrwhist
 vim/.vim/undo-dir/%*
 vim/.vim/undo-dir
+fish/.config/fish/fish_variables
