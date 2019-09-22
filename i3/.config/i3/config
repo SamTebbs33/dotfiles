@@ -182,6 +182,7 @@ assign [class="chromium"] $wkspcbrowser
 assign [class="Google-chrome"] $wkspcbrowser
 assign [class="Chrome"] $wkspcBrowser
 assign [class="Gnome-terminal"] $wkspcTerminals
+assign [class="St"] $wkspcTerminals
 assign [class="Skype"] $wkspcChat
 assign [class="Spotify"] $wkspcMedia
 assign [class="spotify"] $wkspcMedia
