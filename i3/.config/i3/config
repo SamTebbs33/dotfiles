@@ -22,7 +22,7 @@ font pango:FontAwesome 11
 floating_modifier $mod
 
 # i3-gaps
-smart_gaps on
+# smart_gaps on
 gaps inner 7
 gaps outer 3
 
