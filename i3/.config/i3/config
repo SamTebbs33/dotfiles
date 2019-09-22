@@ -148,15 +148,15 @@ bindsym $mod+Shift+7 move container to workspace $wkspcIDE
 bindsym $mod+Shift+8 move container to workspace $wkspcGames
 bindsym $mod+Shift+9 move container to workspace $wkspcDebug
 
-workspace $wkspcTerminals output LVDS1
-workspace $wkspcBrowser output LVDS1
-workspace $wkspcChat output LVDS1
-workspace $wkspcMedia output LVDS1
-workspace $wkspcMail output LVDS1
-workspace $wkspcGit output LVDS1
-workspace $wkspcIDE output LVDS1
-workspace $wkspcGames output LVDS1
-workspace $wkspcDebug output LVDS1
+workspace $wkspcTerminals output DVI-I-1
+workspace $wkspcBrowser output DP-3
+workspace $wkspcChat output DVI-I-1
+workspace $wkspcMedia output DP-3
+workspace $wkspcMail output DP-3
+workspace $wkspcGit output DP-3
+workspace $wkspcIDE output DVI-I-1
+workspace $wkspcGames output DVI-I-1
+workspace $wkspcDebug output DVI-I-1
 
 bindsym $mod+1 workspace $wkspcTerminals
 bindsym F1 workspace $wkspcTerminals
