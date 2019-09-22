@@ -1,6 +1,7 @@
 mk_abbrev gca "git commit --amend"
 mk_abbrev gserve "git daemon --reuseaddr --verbose  --base-path=. --export-all"
-mk_abbrev gr "git revert"
+mk_abbrev gr "git reset"
+mk_abbrev grh "git reset --hard"
 mk_abbrev gu "git push"
 mk_abbrev guo "git push origin"
 mk_abbrev gp "git pull"
