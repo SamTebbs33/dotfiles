@@ -73,3 +73,7 @@ end
 # Tar
 mk_abbrev "tarx" "tar -xvf"
 mk_abbrev "tarc" "tar -cvf"
+
+# Zig
+mk_abbrev "z" "zig"
+mk_abbrev "zb" "zig build"
