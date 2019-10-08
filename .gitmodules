@@ -58,3 +58,6 @@
 [submodule "vim/.vim/bundle/vim-markdown-preview"]
 	path = vim/.vim/bundle/vim-markdown-preview
 	url = https://github.com/JamshedVesuna/vim-markdown-preview
+[submodule "vim/.vim/bundle/Verilog-support"]
+	path = vim/.vim/bundle/Verilog-support
+	url = https://github.com/jmcneal/verilog-support
