@@ -4,9 +4,6 @@
 [submodule "vim/.vim/bundle/vim-airline"]
 	path = vim/.vim/bundle/vim-airline
 	url = https://github.com/vim-airline/vim-airline
-[submodule "vim/.vim/bundle/syntastic"]
-	path = vim/.vim/bundle/syntastic
-	url = https://github.com/vim-syntastic/syntastic
 [submodule "vim/.vim/bundle/vim-gitgutter"]
 	path = vim/.vim/bundle/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter
