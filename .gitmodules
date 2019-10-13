@@ -61,3 +61,6 @@
 [submodule "vim/.vim/bundle/ale"]
 	path = vim/.vim/bundle/ale
 	url = https://github.com/dense-analysis/ale
+[submodule "vim/.vim/bundle/vim-buffet"]
+	path = vim/.vim/bundle/vim-buffet
+	url = https://github.com/bagrat/vim-buffet
