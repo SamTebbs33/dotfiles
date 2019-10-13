@@ -64,3 +64,6 @@
 [submodule "vim/.vim/bundle/vim-buffet"]
 	path = vim/.vim/bundle/vim-buffet
 	url = https://github.com/bagrat/vim-buffet
+[submodule "vim/.vim/bundle/vim-startify"]
+	path = vim/.vim/bundle/vim-startify
+	url = https://github.com/mhinz/vim-startify
