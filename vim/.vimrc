@@ -168,6 +168,8 @@ let g:gitgutter_eager=0
 
 " Filetype-specific
 autocmd FileType c setlocal expandtab shiftwidth=4 autoindent
+autocmd FileType cpp setlocal expandtab shiftwidth=4 autoindent
+autocmd FileType verilog setlocal expandtab shiftwidth=4 autoindent
 autocmd FileType asm setlocal expandtab shiftwidth=4 autoindent tabstop=4
 
 " Tagbar
