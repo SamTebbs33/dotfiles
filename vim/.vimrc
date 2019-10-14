@@ -217,12 +217,13 @@ nmap <leader>0 <Plug>BuffetSwitch(10)
 
 let g:buffet_max_plug = 10
 let g:buffet_always_show_tabline = 0
-let g:buffet_powerline_separators = 1
+let g:buffet_powerline_separators = 0
 let g:buffet_show_index = 1
-let g:buffet_use_devicons = 0
-let g:buffet_tab_icon = ":"
 let g:buffet_new_buffer_name = "?"
 let g:buffet_modified_icon = "*"
+let g:buffet_tab_icon = "/"
+let g:buffet_left_trunc_icon = "\uf0a8"
+let g:buffet_right_trunc_icon = "\uf0a9"
 
 nnoremap <tab> :b#<CR>
 
