@@ -1,48 +1,22 @@
 #!/bin/bash
 
-meminfo=$(cat /proc/meminfo)
-IFS=";" read -r -a keys <<< $BLOCK_INSTANCE
-key1=${keys[0]}
-
-if [[ ${#keys[@]} -le 0 ]]; then
-  key2=""
-else
-  key2=${keys[1]}
-fi
-
-val1=$(echo "$meminfo" | grep -i "$key1" | awk -F ':' '{print $2}' | tr -d " kB")
-fullval1=$val1
-
-size1="KB"
+usage=$(free | grep Mem | awk '{ print(int($3/$2 * 100.0)) }')
+scaled=$(echo $usage | awk '{ print(int($1/10)) }')
 colour="light green"
-if [[ $val1 -gt 1024 ]]; then
-  size1="MB"
-  val1=$(expr $val1 / 1024)
-fi
-if [[ $val1 -gt 1024 ]]; then
-  size1="GB"
-  val1=$(expr $val1 / 1024)
-fi
-if [[ "$key2" != "" ]]; then
-  val2=$(echo "$meminfo" | grep -i "$key2" | awk -F ':' '{print $2}' | tr -d " kB")
-  fullval2=$val2
-
-  size2="KB"
-  if [[ $val2 -gt 1024 ]]; then
-    size2="MB"
-    val2=$(expr $val2 / 1024)
-  fi
-  if [[ $val2 -gt 1024 ]]; then
-    size2="GB"
-    val2=$(expr $val2 / 1024)
-  fi
-
-  if [[ $fullval1 -le $(expr $fullval2 / 10) ]]; then
-    colour="red"
-  fi
-
-  span="<span foreground='$colour'>"
-  echo "$span$val1 $size1</span> / $val2 $size2"
-else
-  echo "$val1 $size1"
-fi
+    case $scaled in
+      0) bars="/----";;
+      1) bars="/----";;
+      2) bars="//---";;
+      3) bars="//---";;
+      4) bars="///--";;
+      5) bars="///--";;
+      6) bars="///--";;
+      7) bars="////-";;
+      8) bars="////-";;
+      9) bars="/////";;
+      10) bars="/////";;
+    esac
+    if [[ "$scaled" -ge 8 ]]; then
+      colour="orange"
+    fi
+    echo "[<span foreground='$colour'>$bars</span>] $usage%"
