@@ -8,6 +8,13 @@ set ignorecase
 set smartcase
 set smartindent
 set autoindent
+
+function! g:BuffetSetCustomColors()
+    hi! BuffetCurrentBuffer cterm=NONE guibg=#0D61AC guifg=white
+    hi! BuffetBuffer cterm=NONE guibg=#151515 guifg=white
+    hi! BuffetTab cterm=NONE guibg=#151515 guifg=white
+endfunction
+
 execute pathogen#infect()
 set number
 set numberwidth=1
