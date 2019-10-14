@@ -62,9 +62,9 @@ set matchpairs+=<:>
 set re=1
 
 " Listing buffers
-nnoremap <tab> :buffers<CR>:buffer<Space>
+" nnoremap <tab> :buffers<CR>:buffer<Space>
 " Buffer quickswitch
-nnoremap <leader>b :b#<CR>
+" nnoremap <leader>b :b#<CR>
 
 " Automatic toggling of hybrid line numbers
 set number relativenumber
@@ -221,3 +221,6 @@ let g:buffet_use_devicons = 0
 let g:buffet_tab_icon = ":"
 let g:buffet_new_buffer_name = "?"
 let g:buffet_modified_icon = "*"
+
+nnoremap <tab> :b#<CR>
+
