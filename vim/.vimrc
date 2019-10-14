@@ -23,6 +23,8 @@ filetype plugin indent on
 Helptags
 set visualbell
 set hlsearch
+set encoding=utf8
+set guifont=Source\ Code\ Pro\ For\ Powerline\ 11
 
 let mapleader = " "
 nnoremap <leader>o o<esc>
