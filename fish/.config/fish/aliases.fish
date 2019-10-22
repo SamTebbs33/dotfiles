@@ -33,16 +33,8 @@ alias . "open ."
 alias .. 'cd ..'
 alias mk "mkfile 0"
 alias cls "clear"
-if [ (uname) = "Linux" ]
-	alias aupdate "sudo apt-get update"
-	alias arm "sudo apt-get remove"
-	alias aget "sudo apt-get"
-	alias ageti "sudo apt-get install"
-	alias paci "sudo pacman -S"
-	alias pacu "sudo pacman -Syyu"
-else
-	alias cat "ccat"
-end
+alias paci "sudo pacman -S"
+alias pacu "sudo pacman -Syyu"
 
 # grep
 function grp
