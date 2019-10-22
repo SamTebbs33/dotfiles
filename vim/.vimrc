@@ -27,6 +27,7 @@ set encoding=utf8
 set guifont=Source\ Code\ Pro\ For\ Powerline\ 11
 
 let mapleader = " "
+nnoremap <leader>s :%s/
 nnoremap <leader>o o<esc>
 nnoremap <leader>O O<esc>
 nnoremap <leader>c "*yy
