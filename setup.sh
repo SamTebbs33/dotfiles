@@ -18,6 +18,6 @@ cd pulseaudio-ctl
 makepkg -Acs .
 
 cd ~/dotfiles
-stow vim i3 x nvim fish fonts
+stow vim i3 x nvim fish fonts terminator
 
 setxkbmap -layout gb
