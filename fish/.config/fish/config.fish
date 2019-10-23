@@ -5,11 +5,9 @@ set PATH $HOME/repos/zig/build $PATH
 # z88dk variables
 set ZCCCFG $HOME/repos/z88dk/lib/config
 
-function mk_abbrev
-	set -U fish_user_abbreviations $fish_user_abbreviations "$argv[1]=$argv[2]"
+function mk_abbrev -a abbrv -a expansion
+	abbr -a $abbrv $expansion
 end
-
-set fish_user_abbreviations ""
 
 for file in ~/.config/fish/*.fish
 	set filename (basename $file)
