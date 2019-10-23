@@ -19,3 +19,5 @@ makepkg -Acs .
 
 cd ~/dotfiles
 stow vim i3 x nvim fish fonts
+
+setxkbmap -layout gb
