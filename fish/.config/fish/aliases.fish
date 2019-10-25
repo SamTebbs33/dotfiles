@@ -35,6 +35,8 @@ alias mk "mkfile 0"
 alias cls "clear"
 alias paci "sudo pacman -S"
 alias pacu "sudo pacman -Syyu"
+mk_abbrev pacr "sudo pacman -R"
+mk_abbrev pacf "sudo pacman -F"
 
 # grep
 function grp
