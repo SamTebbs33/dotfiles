@@ -69,3 +69,15 @@ mk_abbrev "tarc" "tar -cvf"
 # Zig
 mk_abbrev "z" "zig"
 mk_abbrev "zb" "zig build"
+function h2d -a hex
+	printf "%d\n" $hex
+end
+function d2h -a dec
+	printf "%x\n" $dec
+end
+function h2b -a hex
+	echo "ibase=16;obase=2;$hex" | bc
+end
+function d2b -a dec
+	printf "%b\n" $dec
+end
