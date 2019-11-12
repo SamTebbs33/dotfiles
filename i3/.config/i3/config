@@ -148,15 +148,15 @@ bindsym $mod+Shift+7 move container to workspace $wkspcIDE
 bindsym $mod+Shift+8 move container to workspace $wkspcGames
 bindsym $mod+Shift+9 move container to workspace $wkspcDebug
 
-workspace $wkspcTerminals output DVI-I-1
-workspace $wkspcBrowser output DP-3
+workspace $wkspcTerminals output DP-4
+workspace $wkspcBrowser output DVI-I-1
 workspace $wkspcChat output DVI-I-1
-workspace $wkspcMedia output DP-3
-workspace $wkspcMail output DP-3
-workspace $wkspcGit output DP-3
-workspace $wkspcIDE output DVI-I-1
-workspace $wkspcGames output DVI-I-1
-workspace $wkspcDebug output DVI-I-1
+workspace $wkspcMedia output DVI-I-1
+workspace $wkspcMail output DVI-I-1
+workspace $wkspcGit output DP-4
+workspace $wkspcIDE output DP-4
+workspace $wkspcGames output DP-4
+workspace $wkspcDebug output DP-4
 
 bindsym $mod+1 workspace $wkspcTerminals
 bindsym F1 workspace $wkspcTerminals
@@ -182,6 +182,7 @@ assign [class="chromium"] $wkspcbrowser
 assign [class="Google-chrome"] $wkspcbrowser
 assign [class="Chrome"] $wkspcBrowser
 assign [class="Gnome-terminal"] $wkspcTerminals
+assign [class="terminator"] $wkspcTerminals
 assign [class="St"] $wkspcTerminals
 assign [class="Skype"] $wkspcChat
 assign [class="Spotify"] $wkspcMedia
@@ -191,6 +192,7 @@ assign [class="GitKraken"] $wkspcGit
 #assign [class="jetbrains-clion"] $wkspcIDE
 assign [class="jetbrains-webstorm"] $wkspcIDE
 assign [class="Steam"] $wkspcGames
+assign [class="steam"] $wkspcGames
 assign [class="modeldebugger.exec"] $wkspcDebug
 assign [class="slack"] $wkspcChat
 assign [class="Slack"] $wkspcChat
