@@ -67,3 +67,6 @@
 [submodule "vim/.vim/bundle/vim-startify"]
 	path = vim/.vim/bundle/vim-startify
 	url = https://github.com/mhinz/vim-startify
+[submodule "vim/.vim/bundle/vim-abolish"]
+	path = vim/.vim/bundle/vim-abolish
+	url = git://github.com/tpope/vim-abolish.git
