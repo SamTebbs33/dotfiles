@@ -29,12 +29,13 @@ end
 alias less "less -R"
 
 # Other
-alias . "open ."
-alias .. 'cd ..'
-alias mk "mkfile 0"
-alias cls "clear"
-alias paci "sudo pacman -S"
-alias pacu "sudo pacman -Syyu"
+mk_abbrev . "open ."
+mk_abbrev .. 'cd ..'
+mk_abbrev mk "mkfile 0"
+mk_abbrev cls "clear"
+mk_abbrev paci "sudo pacman -S"
+mk_abbrev pacs "sudo pacman -Syy"
+mk_abbrev pacu "sudo pacman -Syyu"
 mk_abbrev pacr "sudo pacman -R"
 mk_abbrev pacf "sudo pacman -F"
 
