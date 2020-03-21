@@ -22,8 +22,8 @@ font pango:FontAwesome 9
 floating_modifier $mod
 
 smart_gaps on
-gaps inner 7
-gaps outer 3
+gaps inner 3
+gaps outer 1
 
 # Hide title bar
 default_border pixel 1
