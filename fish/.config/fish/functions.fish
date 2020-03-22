@@ -49,3 +49,10 @@ end
 function dosudo
 	eval command sudo $history[1]
 end
+
+function aur -a url
+	git clone $url
+	set dir (echo $url | sed 's/.*\///' | sed 's/\..*//')
+	cd $dir
+	makepkg -Acs && sudo pacman -U $dir*.tar.xz
+end
