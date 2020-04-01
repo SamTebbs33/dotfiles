@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ifc=$(ip addr | grep -woP "(en|eth)(\d|[a-zA-Z])+" | head -n1)
+ifc=$(ip addr | grep -woP "(eno|eth)\d+(\d|[a-zA-Z])*" | head -n1)
 
 if [[ "$ifc" != "" ]]; then
   status=$(cat /sys/class/net/$ifc/operstate)
