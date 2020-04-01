@@ -1,15 +1,15 @@
 #!/bin/bash
 
-ifc=$(ifconfig | grep -woP "(en|eth)(\d|[a-zA-Z])+" | head -n1)
+ifc=$(ip addr | grep -woP "(en|eth)(\d|[a-zA-Z])+" | head -n1)
 
 if [[ "$ifc" != "" ]]; then
-  status=$(cat /sys/class/net/"$ifc"/operstate)
+  status=$(cat /sys/class/net/$ifc/operstate)
   ip=""
 
   case $status in
     "up")
       colour="cyan"
-      ifcip=$(ifconfig "$ifc" | grep -P "inet (\d+\.\d+\.\d+\.\d+)" -wo | grep -P "\d+\.\d+\.\d+\.\d+" -wo)
+      ifcip=$(ip addr show dev $ifc | grep -P "inet (\d+\.\d+\.\d+\.\d+)" -wo | grep -P "\d+\.\d+\.\d+\.\d+" -wo)
     
       if [[ $ifcip != "" ]]; then
         ip=" @ $ifcip"

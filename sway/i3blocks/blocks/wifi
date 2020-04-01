@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ifc=$(ifconfig | grep -woP "wl(\d|[a-zA-Z])+")
+ifc=$(ip addr | grep -woP "wl(\d|[a-zA-Z])+")
 
 if [[ "$ifc" != "" ]]; then
   ssid=$(nmcli -t -f active,ssid dev wifi | egrep "^yes" | cut -c 5-)
