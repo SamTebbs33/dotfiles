@@ -221,7 +221,9 @@ bindsym XF86AudioNext exec playerctl next && pkill -RTMIN+2 i3blocks
 bindsym XF86AudioPrev exec playerctl previous && pkill -RTMIN+2 i3blocks
 
 # Keyboard
-input * xkb_layout "gb"
+input type:keyboard {
+	xkb_options caps:escape
+}
 
 # Monitors
 output DVI-I-1 pos 0 0 res 1920x1080@60Hz
