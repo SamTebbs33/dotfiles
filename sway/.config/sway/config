@@ -203,7 +203,7 @@ for_window [class="Yad"] floating enable # Make yad popups float (used by i3bloc
 bindsym $mod+shift+x exec i3lock
 
 # Wallpaper
-#output "*" bg ~/Pictures/Wallpapers/space.jpg fill
+output "*" bg ~/images/wallpapers/space.jpg fill
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q -D pulse sset Master 5%+ && pkill -RTMIN+10 i3blocks
