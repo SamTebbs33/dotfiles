@@ -1,6 +1,8 @@
 # Path
 set PATH $HOME/bin $PATH
 set PATH $HOME/repos/zig/build $PATH
+set EDITOR /usr/bin/nvim
+set VISUAL $EDITOR
 
 # z88dk variables
 set ZCCCFG $HOME/repos/z88dk/lib/config
