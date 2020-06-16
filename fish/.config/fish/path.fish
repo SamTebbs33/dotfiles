@@ -4,6 +4,8 @@ function add_bin_dir -a dir
 	end
 end
 
+add_bin_dir $HOME/bin
+add_bin_dir $HOME/repos/zig/build
 add_bin_dir /home/$USER/bin/gcc/i686-elf/build/bin
 add_bin_dir /home/$USER/bin/binutils/i686-elf/build/bin
 add_bin_dir /home/$USER/bin/grub/build/bin
