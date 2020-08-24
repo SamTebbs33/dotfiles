@@ -146,15 +146,15 @@ bindsym $mod+Shift+7 move container to workspace $wkspcIDE
 bindsym $mod+Shift+8 move container to workspace $wkspcGames
 bindsym $mod+Shift+9 move container to workspace $wkspcDebug
 
-workspace $wkspcTerminals output DP-4
-workspace $wkspcBrowser output DVI-I-1
-workspace $wkspcChat output DVI-I-1
-workspace $wkspcMedia output DVI-I-1
-workspace $wkspcMail output DVI-I-1
-workspace $wkspcGit output DP-4
-workspace $wkspcIDE output DP-4
-workspace $wkspcGames output DP-4
-workspace $wkspcDebug output DP-4
+workspace $wkspcTerminals output DP-3
+workspace $wkspcBrowser output HDMI-A-1
+workspace $wkspcChat output HDMI-A-1
+workspace $wkspcMedia output HDMI-A-1
+workspace $wkspcMail output HDMI-A-1
+workspace $wkspcGit output DP-3
+workspace $wkspcIDE output DP-3
+workspace $wkspcGames output DP-3
+workspace $wkspcDebug output DP-3
 
 bindsym $mod+1 workspace $wkspcTerminals
 bindsym F1 workspace $wkspcTerminals
@@ -229,8 +229,9 @@ input type:keyboard {
 input type:touchpad {
 	tap enabled
 	natural_scroll enabled
+	scroll_factor 0.75
 }
 
 # Monitors
-output DVI-I-1 pos 0 0 res 1920x1080@60Hz
-output DP-2 pos 1920 0 res 1920x1080@144.001007Hz
+output HDMI-A-1 pos 0 0 res 1920x1080@60Hz
+output DP-3 pos 1920 0 res 1920x1080@144.001007Hz
