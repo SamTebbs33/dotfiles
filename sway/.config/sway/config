@@ -222,6 +222,7 @@ bindsym XF86AudioPrev exec playerctl previous && pkill -RTMIN+2 i3blocks
 
 # Keyboard
 input type:keyboard {
+	xkb_layout gb
 	xkb_options caps:escape
 }
 

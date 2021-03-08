@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [[ "${BLOCK_BUTTON}" -eq 1 ]]; then
+  bluetooth toggle > /dev/null
+fi
+
+status=$(bluetooth | grep -P -wo "on|off")
+
+if [[ "$status" != "" ]]; then
+  if [[ "$status" == "on" ]]; then
+    colour="cyan"
+  else
+    colour="orange"
+  fi
+  echo "<span foreground='$colour'>$status</span>"
+fi

@@ -1,0 +1,33 @@
+#!/bin/bash
+
+ifc=$(ip addr | grep -woP "wl(\d|[a-zA-Z])+")
+
+if [[ "$ifc" != "" ]]; then
+  ssid=$(nmcli -t -f active,ssid dev wifi | egrep "^yes" | cut -c 5-)
+  if [[ "$ssid" != "" ]]; then
+    strength=$(expr $(nmcli -t -f active,ssid,signal dev wifi | grep yes|cut -d':' -f3) / 10)
+    if [[ "$ssid" != "" ]]; then
+      ssid="<span foreground='cyan'>$ssid</span> "
+    fi
+  
+    colour="light green"
+    case $strength in
+      1) bars="/----";;
+      2) bars="/----";;
+      3) bars="//---";;
+      4) bars="//---";;
+      5) bars="///--";;
+      6) bars="///--";;
+      7) bars="////-";;
+      8) bars="////-";;
+      9) bars="/////";;
+      10) bars="/////";;
+      *)
+        bars="-----"
+        colour="orange";;
+    esac
+    echo "$ssid [<span foreground='$colour'>$bars</span>]"
+  else
+    echo "<span foreground='orange'>none</span>"
+  fi
+fi
