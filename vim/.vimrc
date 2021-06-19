@@ -56,6 +56,10 @@ nnoremap w<right> <c-w>l
 nnoremap w- :vertical res -5<enter>
 nnoremap w= :vertical res +5<enter>
 
+" Fuzzy finding
+set path=**
+nnoremap <leader>f :find
+
 " Paste without overwriting the default register
 vnoremap p "_dP
 
@@ -186,10 +190,6 @@ nnoremap <leader>h :%!xxd<cr>
 let g:UltiSnipsExpandTrigger="<c-space>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-
-" ctrlp
-let g:ctrlp_max_files=0
-let g:ctrlp_max_depth=40
 
 " vim-localvimrc
 let g:localvimrc_sandbox = 0
