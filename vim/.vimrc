@@ -52,6 +52,9 @@ nnoremap wk <c-w>k
 nnoremap w<up> <c-w>k
 nnoremap wl <c-w>l
 nnoremap w<right> <c-w>l
+" Window resizing
+nnoremap w- :vertical res -5<enter>
+nnoremap w= :vertical res +5<enter>
 
 " Paste without overwriting the default register
 vnoremap p "_dP
