@@ -192,8 +192,9 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " vim-localvimrc
-let g:localvimrc_sandbox = 0
-let g:localvimrc_ask = 0
+"let g:localvimrc_sandbox = 0
+"let g:localvimrc_ask = 0
+set exrc
 
 " Enable true color support.
 set termguicolors
