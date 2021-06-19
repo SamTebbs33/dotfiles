@@ -58,7 +58,7 @@ nnoremap w= :vertical res +5<enter>
 
 " Fuzzy finding
 set path=**
-nnoremap <leader>f :find
+nnoremap <leader>f :find 
 
 " Paste without overwriting the default register
 vnoremap p "_dP
