@@ -35,6 +35,7 @@ nnoremap <leader>q :q<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>x :wq<CR>
 nnoremap <leader>f :Autoformat<CR>
+nnoremap <leader>e :e!<CR>
 set backspace=indent,eol,start
 " Reload .vimrc
 nnoremap <leader>r :so ~/.vimrc<CR>
