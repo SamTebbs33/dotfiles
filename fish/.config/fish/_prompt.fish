@@ -14,39 +14,45 @@ set git_indicator_cmds "git diff --name-only --cached" "git ls-files --others --
 set git_indicator_symbols "*" "+" "~"
 
 function fish_right_prompt
-	set git_indicator_values
-	set -l s $status
-	set -l branch (git branch ^/dev/null | sed -n '/\* /s///p')
-	#if set -q $BATTERY_IS_CHARGING
-	#	printf "-[⚡]"
-	#end
-	if [ "$branch" != "" ]
-		set -l git_diff (git status 2> /dev/null | tail -n1)
-		if [ "$git_diff" = "nothing to commit, working directory clean" ]
-			set branch_colour brgreen
-		else
-			set branch_colour bryellow
-		end
+	set pwd (pwd)
+	switch $pwd
+		case "$HOME/work/llvm-remote"
+			echo ""
+		case "*"
+			set git_indicator_values
+			set -l s $status
+			set -l branch (git branch ^/dev/null | sed -n '/\* /s///p')
+			#if set -q $BATTERY_IS_CHARGING
+			#	printf "-[⚡]"
+			#end
+			if [ "$branch" != "" ]
+				set -l git_diff (git status 2> /dev/null | tail -n1)
+				if [ "$git_diff" = "nothing to commit, working directory clean" ]
+					set branch_colour brgreen
+				else
+					set branch_colour bryellow
+				end
 
-		for i in (seq 1 (count $git_indicator_cmds))
-			set cmd $git_indicator_cmds[$i]
-			set -l val (eval $cmd | wc -l --)
-			if [ "$val" -gt 0 ]
-				set val $git_indicator_symbols[$i]$val
-				set git_indicator_values $git_indicator_values $val
+				for i in (seq 1 (count $git_indicator_cmds))
+					set cmd $git_indicator_cmds[$i]
+					set -l val (eval $cmd | wc -l --)
+					if [ "$val" -gt 0 ]
+						set val $git_indicator_symbols[$i]$val
+						set git_indicator_values $git_indicator_values $val
+					end
+				end
+
+				printf " ("(set_color $branch_colour; printf $branch; set_color normal)
+				for i in (seq 1 (count $git_indicator_values))
+					printf " | "
+					set_color brcyan
+					printf $git_indicator_values[$i]
+					set_color normal
+				end
+				printf ")"
+			end
+			if [ "$s" != "0" ]
+				printf " ("(set_color brred; printf $s; set_color normal)")"
 			end
 		end
-
-		printf " ("(set_color $branch_colour; printf $branch; set_color normal)
-		for i in (seq 1 (count $git_indicator_values))
-			printf " | "
-			set_color brcyan
-			printf $git_indicator_values[$i]
-			set_color normal
-		end
-		printf ")"
-	end
-	if [ "$s" != "0" ]
-		printf " ("(set_color brred; printf $s; set_color normal)")"
-	end
 end
