@@ -55,9 +55,6 @@
 [submodule "vim/.vim/bundle/vim-markdown-preview"]
 	path = vim/.vim/bundle/vim-markdown-preview
 	url = https://github.com/JamshedVesuna/vim-markdown-preview
-[submodule "vim/.vim/bundle/Verilog-support"]
-	path = vim/.vim/bundle/Verilog-support
-	url = https://github.com/jmcneal/verilog-support
 [submodule "vim/.vim/bundle/ale"]
 	path = vim/.vim/bundle/ale
 	url = https://github.com/dense-analysis/ale
@@ -70,3 +67,6 @@
 [submodule "vim/.vim/bundle/vim-abolish"]
 	path = vim/.vim/bundle/vim-abolish
 	url = git://github.com/tpope/vim-abolish.git
+[submodule "vim/.vim/bundle/verilog_systemverilog.vim"]
+	path = vim/.vim/bundle/verilog_systemverilog.vim
+	url = https://github.com/vhda/verilog_systemverilog.vim
