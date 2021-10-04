@@ -8,4 +8,7 @@ fi
 if [[ $(hostname) = "sam-mbp-arch" ]]; then
 	setxkbmap -layout gb -variant mac
 fi
+
+# Combine common and device i3 config into one file
+~/.config/i3/combine_config.sh
 exec i3

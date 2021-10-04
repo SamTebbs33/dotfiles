@@ -96,7 +96,7 @@ bindsym $mod+a focus parent
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
+bindsym $mod+Shift+r exec ~/.config/i3/combine_config.sh && i3-msg restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
@@ -146,16 +146,6 @@ bindsym $mod+Shift+6 move container to workspace $wkspcGit
 bindsym $mod+Shift+7 move container to workspace $wkspcIDE
 bindsym $mod+Shift+8 move container to workspace $wkspcGames
 bindsym $mod+Shift+9 move container to workspace $wkspcDebug
-
-workspace $wkspcTerminals output DP-4
-workspace $wkspcBrowser output HDMI-0
-workspace $wkspcChat output HDMI-0
-workspace $wkspcMedia output HDMI-0
-workspace $wkspcMail output HDMI-0
-workspace $wkspcGit output DP-4
-workspace $wkspcIDE output DP-4
-workspace $wkspcGames output DP-4
-workspace $wkspcDebug output DP-4
 
 bindsym $mod+1 workspace $wkspcTerminals
 bindsym F1 workspace $wkspcTerminals
@@ -245,8 +235,3 @@ bindsym XF86AudioPlay exec playerctl play-pause && pkill -RTMIN+2 i3blocks
 #bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next && pkill -RTMIN+2 i3blocks
 bindsym XF86AudioPrev exec playerctl previous && pkill -RTMIN+2 i3blocks
-
-# Trackpad settings
-exec xinput set-prop 13 304 1
-exec xinput set-prop 13 286 1
-exec xinput set-prop 13 295 0.6
