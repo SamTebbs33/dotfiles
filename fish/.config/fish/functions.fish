@@ -54,5 +54,5 @@ function aur -a url
 	git clone $url
 	set dir (echo $url | sed 's/.*\///' | sed 's/\..*//')
 	cd $dir
-	makepkg -Acs && sudo pacman -U $dir*.tar.xz
+	makepkg -Acs; and sudo pacman -U $dir*.tar.xz
 end
