@@ -1,0 +1,29 @@
+#!/bin/bash
+# Based on https://aur.archlinux.org/packages/playerctl/
+
+if [[ "${BLOCK_BUTTON}" -eq 1 ]]; then
+    $(playerctl ${ARGUMENTS} play-pause)
+elif [[ "${BLOCK_BUTTON}" -eq 3 ]]; then
+    $(playerctl ${ARGUMENTS} next)
+fi
+
+status=$(playerctl ${ARGUMENTS} status)
+title=$(playerctl ${ARGUMENTS} metadata title)
+album=$(playerctl ${ARGUMENTS} metadata album)
+artist=$(playerctl ${ARGUMENTS} metadata artist)
+
+if [[ "$status" = "Playing" ]]; then
+  colour="cyan"
+else
+  colour="orange"
+fi
+
+if [[ "$title" != "" ]]; then
+  str="<span foreground='$colour'>$title"
+  if [[ "$artist" != "" ]]; then
+    str="$str - $artist"
+  elif [[ "$album" != "" ]]; then
+    str="$str - $album"
+  fi
+  echo "$str</span>"
+fi
