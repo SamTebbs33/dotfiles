@@ -225,7 +225,7 @@ for_window [class="Yad"] floating enable # Make yad popups float (used by i3bloc
 bindsym $mod+shift+x exec i3lock
 
 # Wallpaper
-exec_always feh --bg-scale ~/Pictures/Wallpapers/space.jpg
+exec_always feh --bg-scale ~/Pictures/wallpapers/space.jpg
 
 # Run gnome daemon to sort out window and text scaling
 exec --no-startup-id xset dpms 300
