@@ -75,9 +75,6 @@ done
 
 if [[ -z "$MIXER" ]] ; then
     MIXER="default"
-    if amixer -D pulse info >/dev/null 2>&1 ; then
-        MIXER="pulse"
-    fi
 fi
 
 if [[ -z "$SCONTROL" ]] ; then
@@ -114,53 +111,18 @@ case "$BLOCK_BUTTON" in
 esac
 
 function print_format {
-    PERCENT="%"
-    [[ $USE_PERCENT == 0 ]] && PERCENT=""
     case "$1" in
-        1) echo "$SYMBOL$VOL$PERCENT [$NAME]" ;;
-        2) echo "$SYMBOL$VOL$PERCENT [$INDEX]";;
-        *) echo "$SYMBOL$VOL$PERCENT" ;;
+        1) echo "$SYMBOL$VOLT [$NAME]" ;;
+        2) echo "$SYMBOL$VOLT [$INDEX]";;
+        *) echo "$SYMBOL$VOL" ;;
     esac
 }
 
 function print_block {
-    for name in INDEX NAME VOL MUTED; do
+    for name in INDEX NAME MUTED; do
         read $name
-    done < <(pacmd list-sinks | grep "index:\|name:\|volume: front\|muted:" | grep -A3 '*')
-    INDEX=$(echo "$INDEX" | grep -o '[0-9]\+')
-    VOL=$(echo "$VOL" | grep -o "[0-9]*%" | head -1 )
-    VOL="${VOL%?}"
-
-    NAME=$(echo "$NAME" | sed \
-'s/.*<.*\.\(.*\)>.*/\1/; t;'\
-'s/.*<\(.*\)>.*/\1/; t;'\
-'s/.*/unknown/')
-
-    if [[ $USE_ALSA_NAME == 1 ]] ; then
-        ALSA_NAME=$(pacmd list-sinks |\
-awk '/^\s*\*/{f=1}/^\s*index:/{f=0}f' |\
-grep "alsa.name\|alsa.mixer_name" |\
-head -n1 |\
-sed 's/.*= "\(.*\)".*/\1/')
-        NAME=${ALSA_NAME:-$NAME}
-    elif [[ $USE_DESCRIPTION == 1 ]] ; then
-        DESCRIPTION=$(pacmd list-sinks |\
-awk '/^\s*\*/{f=1}/^\s*index:/{f=0}f' |\
-grep "device.description" |\
-head -n1 |\
-sed 's/.*= "\(.*\)".*/\1/')
-        NAME=${DESCRIPTION:-$NAME}
-    fi
-
-    if [[ $MUTED =~ "no" ]] ; then
-        SYMBOL=$AUDIO_HIGH_SYMBOL
-        [[ $VOL -le $AUDIO_MED_THRESH ]] && SYMBOL=$AUDIO_MED_SYMBOL
-        [[ $VOL -le $AUDIO_LOW_THRESH ]] && SYMBOL=$AUDIO_LOW_SYMBOL
-        COLOR=$DEFAULT_COLOR
-    else
-        SYMBOL=$AUDIO_MUTED_SYMBOL
-        COLOR=$MUTED_COLOR
-    fi
+    done < <(pactl list sinks | grep "Sink #\|Description:\|Mute:")
+    VOL=$(amixer sget Master | grep -wo "[0-9]*%" | head -1)
 
     if [[ $SUBSCRIBE == 1 ]] ; then
         print_format "$LONG_FORMAT"

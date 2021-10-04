@@ -51,7 +51,7 @@ function dosudo
 end
 
 function aur -a url
-	git clone $url
+	git clone --recurse-submodules $url
 	set dir (echo $url | sed 's/.*\///' | sed 's/\..*//')
 	cd $dir
 	makepkg -Acs; and sudo pacman -U $dir*.tar.xz

@@ -14,3 +14,4 @@ add_bin_dir /home/$USER/bin/llvm/build-8.0.0/bin
 add_bin_dir /home/$USER/bin/clang/build/bin
 add_bin_dir /home/$USER/repos/zig/build/bin
 add_bin_dir /home/$USER/.gem/ruby/2.6.0/bin
+add_bin_dir /var/lib/snapd/snap/bin

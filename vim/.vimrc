@@ -32,7 +32,7 @@ nnoremap <leader>o o<esc>
 nnoremap <leader>O O<esc>
 nnoremap <leader>c "*yy
 nnoremap <leader>q :q<CR>
-nnoremap <leader>w :w<CR>
+nnoremap <leader>w :w<CR>:call WriteBackup()<CR>
 nnoremap <leader>x :wq<CR>
 nnoremap <leader>f :Autoformat<CR>
 nnoremap <leader>e :e!<CR>
@@ -237,3 +237,9 @@ nnoremap <tab> :b#<CR>
 let g:ale_echo_msg_format="[%linter%]: %s"
 nnoremap <silent> <leader>[ :ALEPreviousWrap<CR>
 nnoremap <silent> <leader>] :ALENextWrap<CR>
+
+" Write a backup of the current file to /tmp/%
+fun! WriteBackup()
+  let fname =  "".expand("%:t") . ".bkp"
+  silent exe ":!cp % ~/.vim/bkp/" . fname
+endfun

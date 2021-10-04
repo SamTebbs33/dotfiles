@@ -146,15 +146,15 @@ bindsym $mod+Shift+7 move container to workspace $wkspcIDE
 bindsym $mod+Shift+8 move container to workspace $wkspcGames
 bindsym $mod+Shift+9 move container to workspace $wkspcDebug
 
-workspace $wkspcTerminals output DP-3
+workspace $wkspcTerminals output DP-1
 workspace $wkspcBrowser output HDMI-A-1
 workspace $wkspcChat output HDMI-A-1
 workspace $wkspcMedia output HDMI-A-1
 workspace $wkspcMail output HDMI-A-1
-workspace $wkspcGit output DP-3
-workspace $wkspcIDE output DP-3
-workspace $wkspcGames output DP-3
-workspace $wkspcDebug output DP-3
+workspace $wkspcGit output DP-1
+workspace $wkspcIDE output DP-1
+workspace $wkspcGames output DP-1
+workspace $wkspcDebug output DP-1
 
 bindsym $mod+1 workspace $wkspcTerminals
 bindsym F1 workspace $wkspcTerminals
@@ -235,4 +235,4 @@ input type:touchpad {
 
 # Monitors
 output HDMI-A-1 pos 0 0 res 1920x1080@60Hz
-output DP-3 pos 1920 0 res 1920x1080@144.001007Hz
+output DP-1 pos 1920 0 res 1920x1080@144.001007Hz

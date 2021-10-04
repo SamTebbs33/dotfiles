@@ -169,6 +169,7 @@ bindsym F9 workspace $wkspcDebug
 assign [class="Firefox"] $wkspcBrowser
 assign [class="chromium"] $wkspcbrowser
 assign [class="Google-chrome"] $wkspcbrowser
+assign [class="Brave"] $wkspcbrowser
 assign [class="Chrome"] $wkspcBrowser
 assign [class="Firefox"] $wkspcBrowser
 assign [class="Gnome-terminal"] $wkspcTerminals
@@ -191,8 +192,8 @@ assign [class="Slack"] $wkspcChat
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-	separator_symbol "|"
-	status_command i3blocks
+        separator_symbol "|"
+        status_command i3blocks
 }
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
@@ -222,9 +223,9 @@ exec --no-startup-id xset dpms 300
 exec /usr/bin/gnome-settings-daemon
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q -D pulse sset Master 5%+ && pkill -RTMIN+10 i3blocks
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q -D pulse sset Master 5%- && pkill -RTMIN+10 i3blocks
-bindsym XF86AudioMute exec --no-startup-id amixer -q -D pulse set Master 1+ toggle && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioRaiseVolume exec pactl set-sink-mute @DEFAULT_SINK@ false ; exec pactl set-sink-volume @DEFAULT_SINK@ 5%+ && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioLowerVolume exec pactl set-sink-mute @DEFAULT_SINK@ false ; exec pactl set-sink-volume @DEFAULT_SINK@ 5%- && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle && pkill -RTMIN+10 i3blocks
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5
