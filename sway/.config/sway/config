@@ -30,6 +30,10 @@ default_border pixel 1
 # Disable window borders
 for_window [class="^.*"] border pixel 3
 
+input * {
+	xkb_layout "gb"
+}
+
 # start a terminal
 bindsym $mod+Return exec terminator
 
