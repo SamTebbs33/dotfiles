@@ -21,7 +21,7 @@ function fish_right_prompt
 		case "*"
 			set git_indicator_values
 			set -l s $status
-			set -l branch (git branch ^/dev/null | sed -n '/\* /s///p')
+			set -l branch (git branch 2> /dev/null | sed -n '/\* /s///p')
 			#if set -q $BATTERY_IS_CHARGING
 			#	printf "-[⚡]"
 			#end
