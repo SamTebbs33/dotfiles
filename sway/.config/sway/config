@@ -41,7 +41,8 @@ bindsym $mod+Return exec terminator
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec j4-dmenu-desktop --dmenu='bemenu -i --fn "pango:DejaVu Sans Mono 10"' --term="terminator"
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+
 # cycle through workspaces
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
