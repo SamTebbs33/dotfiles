@@ -1,7 +1,8 @@
 # Path
 set EDITOR /usr/bin/nvim
 set VISUAL $EDITOR
-set MOZ_ENABLE_WAYLAND 1
+set -x MOZ_ENABLE_WAYLAND 1
+set -x SDL_VIDEODRIVER wayland
 
 # z88dk variables
 set ZCCCFG $HOME/repos/z88dk/lib/config
