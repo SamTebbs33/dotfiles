@@ -41,7 +41,7 @@ bindsym $mod+Return exec terminator
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+d exec --no-startup-id dmenu
 
 # cycle through workspaces
 bindsym $mod+Tab workspace next
@@ -100,7 +100,7 @@ bindsym $mod+a focus parent
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r exec ~/.config/i3/combine_config.sh && i3-msg restart
+bindsym $mod+Shift+r exec ~/.config/sway/combine_config.sh && swaymsg reload
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
@@ -212,9 +212,6 @@ for_window [class="Yad"] floating enable # Make yad popups float (used by i3bloc
 
 # Bindings
 bindsym $mod+shift+x exec i3lock
-
-# Wallpaper
-exec_always feh --bg-scale ~/Pictures/wallpapers/space.jpg
 
 # Run gnome daemon to sort out window and text scaling
 exec --no-startup-id xset dpms 300
