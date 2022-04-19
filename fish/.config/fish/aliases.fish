@@ -45,7 +45,7 @@ mk_abbrev pacf "sudo pacman -F"
 alias rmr "rm -r"
 alias rmf "rm -f"
 alias rmrf "rm -rf"
-alias rmi "rm -ri *"
+alias rmri "rm -ri"
 
 # Other
 function lines -a file -a from -a num_lines
