@@ -41,21 +41,6 @@ mk_abbrev pacu "sudo pacman -Syyu"
 mk_abbrev pacr "sudo pacman -R"
 mk_abbrev pacf "sudo pacman -F"
 
-# grep
-function grp
-    git symbolic-ref -q --short HEAD 2> /dev/null
-    if [ "$status" -eq 0 ]
-        git grep -n $argv
-    else
-        grep -n -r $argv *
-    end
-end
-alias grpi "grp -ni"
-alias grpr "grp -nr"
-alias grpri "grp -nri"
-alias grpa "grp -nC"
-alias grpra "grp -nrC"
-
 # RM
 alias rmr "rm -r"
 alias rmf "rm -f"
