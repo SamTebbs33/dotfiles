@@ -12,6 +12,3 @@ for file in ~/.config/fish/*.fish
 	set filename (basename $file)
 	if [ "$filename" != "config.fish" ]; and [ "$filename" != "_*" ]; source $file; end
 end
-
-# opam configuration
-source /home/sam/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
