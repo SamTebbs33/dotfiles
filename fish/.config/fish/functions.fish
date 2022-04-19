@@ -1,5 +1,5 @@
 function google -a query -d "Google a query"
-	open "http://www.google.com/search?query=$query"
+	firefox "http://www.google.com/search?query=$query"
 end
 
 function cl -a dir args -d "Cd into dir then list files"
