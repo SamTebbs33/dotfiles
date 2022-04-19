@@ -1,11 +1,8 @@
 # Path
 set EDITOR /usr/bin/nvim
 set VISUAL $EDITOR
-set -x MOZ_ENABLE_WAYLAND 1
-set -x SDL_VIDEODRIVER wayland
-
-# z88dk variables
-set ZCCCFG $HOME/repos/z88dk/lib/config
+#set -x MOZ_ENABLE_WAYLAND 1
+#set -x SDL_VIDEODRIVER wayland
 
 function mk_abbrev -a abbrv -a expansion
 	abbr -a $abbrv $expansion
