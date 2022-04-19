@@ -12,21 +12,6 @@ function bkp -a dir -d "Backup a folder to a bkp directory"
 	cp -r $dir bkp/$dir
 end
 
-function fuck -d "Correct your previous console command"
-	set -l exit_code $status
-	set -x TF_ALIAS fuck
-	set -l fucked_up_command $history[1]
-	thefuck $fucked_up_command | read -l unfucked_command
-	if [ "$unfucked_command" != "" ]
-		eval $unfucked_command
-		if test $exit_code -ne 0
-			history --delete $fucked_up_command
-			history --merge ^ /dev/null
-			return 0
-		end
-	end
-end
-
 function hack -d "Hack some shit"
 	set -l ip $argv[1]
 	set -l times $argv[2]
@@ -44,10 +29,6 @@ function hack -d "Hack some shit"
 	echo (tint: green "Preventing government tracing")
 	sleep 1
 	echo (tint: green "Hack complete")
-end
-
-function dosudo
-	eval command sudo $history[1]
 end
 
 function aur -a url
