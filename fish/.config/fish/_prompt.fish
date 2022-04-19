@@ -6,8 +6,7 @@ function fish_prompt
 	set -l dir (set_color brcyan; printf (echo $dir | sed 's|'$HOME'|~|g'); set_color normal)
 	set -l dir (set_color brcyan; printf (echo $dir | sed 's|gnu-work/workspace|wkspc|g'); set_color normal)
 	set -l time (set_color brcyan; printf (date +"%H:%M"); set_color normal)
-	echo "($time) $name$at$host ($dir)"
-	echo "→ "
+	echo "($time) $name$at$host ($dir) → "
 end
 
 set git_indicator_cmds "git diff --name-only --cached" "git ls-files --others --exclude-standard" "git ls-files --modified --exclude-standard"
