@@ -6,3 +6,5 @@ end
 
 add_bin_dir $HOME/bin
 add_bin_dir /var/lib/snapd/snap/bin
+
+export XDG_CONFIG_HOME=$HOME/.config
