@@ -199,7 +199,7 @@ bar {
 		nic.states="up" nic.format="{ip} {ssid}" \
 		memory.format="{used} ({percent:00.00f}%)" \
 		playerctl.format="{{artist}} - {{title}}" playerctl.layout="playerctl.prev,playerctl.pause,playerctl.next,playerctl.song" \
-		pasink.autostart="true" pasink.percent_change="5%" pasink.limit="100%" \
+		pasink.percent_change="5%" pasink.limit="100%" \
 		xrandr.autotoggle="true" \
 		-t iceberg-dark-powerline
 }
