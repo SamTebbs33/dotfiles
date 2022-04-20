@@ -23,7 +23,7 @@ floating_modifier $mod
 
 smart_gaps on
 gaps inner 3
-gaps outer 1
+gaps outer 3
 
 # Hide title bar
 new_window 1pixel
