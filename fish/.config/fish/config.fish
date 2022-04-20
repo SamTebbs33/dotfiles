@@ -1,6 +1,8 @@
 # Path
 set EDITOR /usr/bin/nvim
 set VISUAL $EDITOR
+export EDITOR=/usr/bin/nvim
+export VISUAL=$EDITOR
 #set -x MOZ_ENABLE_WAYLAND 1
 #set -x SDL_VIDEODRIVER wayland
 
