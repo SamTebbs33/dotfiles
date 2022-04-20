@@ -201,7 +201,7 @@ bar {
 		playerctl.format="{{artist}} - {{title}}" playerctl.layout="playerctl.prev,playerctl.pause,playerctl.next,playerctl.song" \
 		pasink.autostart="true" pasink.percent_change="5%" pasink.limit="100%" \
 		xrandr.autotoggle="true" \
-		-t iceberg-powerline
+		-t iceberg-dark-powerline
 }
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
