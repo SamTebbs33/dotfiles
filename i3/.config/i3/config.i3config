@@ -201,6 +201,7 @@ bar {
 		playerctl.format="{{artist}} - {{title}}" playerctl.layout="playerctl.prev,playerctl.pause,playerctl.next,playerctl.song" \
 		pasink.percent_change="5%" pasink.limit="100%" \
 		xrandr.autotoggle="true" \
+		-a cpu memory disk \
 		-t iceberg-dark-powerline
 }
 
