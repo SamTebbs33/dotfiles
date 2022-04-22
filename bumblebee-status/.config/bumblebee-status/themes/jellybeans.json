@@ -1,0 +1,41 @@
+{
+    "icons": ["awesome-fonts"],
+    "colors": [
+        {
+            "white": "#d7d7d7",
+            "white_d": "#adadad",
+            "black": "#000000",
+            "black_l": "#121212",
+            "grey_d": "#1c1c1c",
+            "grey_l": "#3b3b3b",
+            "grey_2": "#222222",
+            "red": "#d75f5f",
+            "green_d": "#72a25a",
+            "green_l": "#99ad6a",
+            "yellow_d": "#ffb964",
+            "yellow_l": "#d8ad4c",
+            "blue_d": "#597bc5",
+            "blue_l": "#8197bf",
+            "magenta_d": "#8787af",
+            "magenta_l": "#d7afff",
+            "cyan_d": "#4a8382",
+            "cyan_l": "#8fbfdc"
+        }
+    ],
+    "defaults": {
+        "fg": "white",
+        "bg": "black",
+        "warning": {
+            "bg": "#ffb964",
+            "fg": "#121212"
+        },
+        "critical": {
+            "bg": "red",
+            "fg": "#020202"
+        }
+    },
+    "cycle": [
+        { "fg": "white", "bg": "black_l" },
+        { "fg": "white", "bg": "grey_d" }
+    ]
+}

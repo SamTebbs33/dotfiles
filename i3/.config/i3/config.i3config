@@ -193,7 +193,7 @@ bar {
                 pasink.percent_change="5%" pasink.limit="100%" \
                 xrandr.autotoggle="true" \
                 -a cpu memory disk \
-                -t iceberg-dark-powerline
+                -t jellybeans
 }
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
