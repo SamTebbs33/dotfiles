@@ -70,3 +70,12 @@
 [submodule "vim/.vim/bundle/vim-solidity"]
 	path = vim/.vim/bundle/vim-solidity
 	url = https://github.com/tomlion/vim-solidity
+[submodule "vim/.vim/bundle/ayu-vim"]
+	path = vim/.vim/bundle/ayu-vim
+	url = git@github.com:ayu-theme/ayu-vim
+[submodule "vim/.vim/bundle/vim-lucius"]
+	path = vim/.vim/bundle/vim-lucius
+	url = git@github.com:jonathanfilip/vim-lucius
+[submodule "vim/.vim/bundle/vim-orbital"]
+	path = vim/.vim/bundle/vim-orbital
+	url = git@github.com:fcpg/vim-orbital
