@@ -183,7 +183,7 @@ assign [class="Slack"] $wkspcChat
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command bumblebee-status -f /home/sam/log/bumblebee-status.log \
+        status_command bumblebee-status -f $HOME/log/bumblebee-status.log \
                 -m cpu disk memory nic xrandr github playerctl pasink datetime system \
                 -p datetime.format="%a %d/%m/%Y - %H:%M" \
                 disk.system="SI" disk.format="{used} ({percent:00.00f}%)" \
