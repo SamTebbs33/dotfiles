@@ -125,15 +125,15 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-set $wkspcTerminals "1: "
-set $wkspcBrowser "2: "
-set $wkspcChat "3: "
-set $wkspcMedia "4: "
-set $wkspcMail "5: "
-set $wkspcGit "6: "
-set $wkspcIDE "7: "
-set $wkspcGames "8: "
-set $wkspcDebug "9: "
+set $wkspcTerminals ""
+set $wkspcBrowser ""
+set $wkspcChat ""
+set $wkspcMedia ""
+set $wkspcMail ""
+set $wkspcGit ""
+set $wkspcIDE ""
+set $wkspcGames ""
+set $wkspcDebug ""
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $wkspcTerminals
