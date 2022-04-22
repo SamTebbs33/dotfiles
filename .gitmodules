@@ -10,9 +10,6 @@
 [submodule "vim/.vim/bundle/ctrlp.vim"]
 	path = vim/.vim/bundle/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim
-[submodule "vim/.vim/bundle/YouCompleteMe"]
-	path = vim/.vim/bundle/YouCompleteMe
-	url = https://github.com/Valloric/YouCompleteMe
 [submodule "vim/.vim/bundle/vim-airline-themes"]
 	path = vim/.vim/bundle/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes
