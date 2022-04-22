@@ -106,8 +106,11 @@ endif
 set wildignore+=*.o,zig-cache
 
 " Colourscheme
+let g:jellybeans_background_color = "#000000"
 colorscheme jellybeans
 set background=dark
+
+set termguicolors
 let g:enable_bold_font = 1
 let g:enable_italic_font = 1
 let g:hybrid_transparent_background = 1
