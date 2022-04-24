@@ -179,7 +179,7 @@ bar {
                 playerctl.format="{{artist}} - {{title}}" playerctl.layout="playerctl.prev,playerctl.pause,playerctl.next,playerctl.song" playerctl.hide="true" \
                 pasink.percent_change="5%" pasink.limit="100%" \
                 xrandr.autotoggle="true" \
-                -a cpu memory disk \
+                -a cpu memory disk github \
                 -t jellybeans
 }
 
