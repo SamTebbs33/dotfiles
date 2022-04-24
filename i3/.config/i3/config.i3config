@@ -176,7 +176,7 @@ bar {
                 disk.system="SI" disk.format="{used} ({percent:00.00f}%)" \
                 nic.states="up" nic.format="{ip} {ssid}" \
                 memory.format="{used} ({percent:00.00f}%)" \
-                playerctl.format="{{artist}} - {{title}}" playerctl.layout="playerctl.prev,playerctl.pause,playerctl.next,playerctl.song" \
+                playerctl.format="{{artist}} - {{title}}" playerctl.layout="playerctl.prev,playerctl.pause,playerctl.next,playerctl.song" playerctl.hide="true" \
                 pasink.percent_change="5%" pasink.limit="100%" \
                 xrandr.autotoggle="true" \
                 -a cpu memory disk \
