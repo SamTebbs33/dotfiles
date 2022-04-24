@@ -10,6 +10,14 @@ function cl -a dir args -d "Cd into dir then list files"
 	cd $dir
 	ls $args
 end
+#
+# Programs
+function fnd -a pattern -a path
+	if [ -z "$path" ]
+		set path "."
+	end
+	find $path -name $pattern 2>&1 | grep -v "Permission denied"
+end
 
 function bkp -a dir -d "Backup a folder to a bkp directory"
 	mkdir bkp

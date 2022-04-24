@@ -11,14 +11,6 @@ function vima
 end
 alias vim nvim
 
-# Programs
-function fnd -a pattern -a path
-	if [ -z "$path" ]
-		set path "."
-	end
-	find $path -name $pattern
-end
-
 # ls
 alias ls 'ls --color=auto -alh -I "." -I ".."'
 function lss

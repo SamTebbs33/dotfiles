@@ -67,3 +67,6 @@
 [submodule "vim/.vim/bundle/vim-solidity"]
 	path = vim/.vim/bundle/vim-solidity
 	url = https://github.com/tomlion/vim-solidity
+[submodule "vim/.vim/bundle/YouCompleteMe"]
+	path = vim/.vim/bundle/YouCompleteMe
+	url = git@github.com:ycm-core/YouCompleteMe
