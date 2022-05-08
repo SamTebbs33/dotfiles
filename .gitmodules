@@ -25,9 +25,6 @@
 [submodule "vim/.vim/bundle/zig.vim"]
 	path = vim/.vim/bundle/zig.vim
 	url = https://github.com/ziglang/zig.vim
-[submodule "vim/.vim/bundle/UltiSnips"]
-	path = vim/.vim/bundle/UltiSnips
-	url = https://github.com/sirver/UltiSnips
 [submodule "vim/.vim/bundle/vim-snippets"]
 	path = vim/.vim/bundle/vim-snippets
 	url = https://github.com/honza/vim-snippets
