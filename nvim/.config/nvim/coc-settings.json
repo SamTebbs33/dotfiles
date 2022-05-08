@@ -4,5 +4,7 @@
            "command": "zls",
            "filetypes": ["zig"]
        }
-   }
+   },
+  "coc.source.OmniSharp.enable": true,
+  "coc.source.OmniSharp.triggerCharacters": "."
 }

@@ -237,6 +237,9 @@ let g:buffet_right_trunc_icon = "\uf0a9"
 nnoremap <tab> :b#<CR>
 
 " ale
+let g:ale_linters = {
+\ 'cs': ['OmniSharp']
+\}
 let g:ale_echo_msg_format="[%linter%]: %s"
 nnoremap <silent> <leader>[ :ALEPreviousWrap<CR>
 nnoremap <silent> <leader>] :ALENextWrap<CR>
