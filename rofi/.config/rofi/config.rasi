@@ -1,0 +1,10 @@
+configuration {
+    modi: "drun,window";
+    show-icons: true;
+    icon-theme: "Papirus";
+
+    icon {
+        theme: "Papirus";
+    }
+}
+@theme "jellybeans"
