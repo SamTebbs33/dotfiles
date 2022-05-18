@@ -161,6 +161,7 @@ bindsym F9 workspace $wkspcDebug
 assign [class="firefox"] $wkspcBrowser
 assign [class="Thunderbird"] $wkspcMail
 assign [class="Steam"] $wkspcGames
+assign [class="unityhub"] $wkspcIDE
 # Some programs don't assign the class until the window has already been created
 for_window [class="(?i)terminator"] move to workspace $wkspcTerminals
 for_window [class="(?i)spotify"] move to workspace $wkspcMedia
@@ -171,7 +172,7 @@ for_window [class="Steam" title="Friends List"] floating enable
 # finds out, if available)
 bar {
         status_command bumblebee-status -f $HOME/log/bumblebee-status.log \
-                -m cpu disk memory nic xrandr github playerctl pasink datetime system \
+                -m progress cpu disk memory nic xrandr github playerctl pasink datetime system \
                 -p datetime.format="%a %d/%m/%Y - %H:%M" \
                 disk.system="SI" disk.format="{used} ({percent:00.00f}%)" \
                 nic.states="up" nic.format="{ip} {ssid}" \
