@@ -39,6 +39,9 @@ alias rmf "rm -f"
 alias rmrf "rm -rf"
 alias rmri "rm -ri"
 
+# Fuzzy finding with fzf
+mk_abbrev h "history | fzf"
+
 # Other
 function lines -a file -a from -a num_lines
     tail $file -n+$from | head -n$num_lines
