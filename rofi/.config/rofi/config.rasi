@@ -2,5 +2,7 @@ configuration {
     modi: "drun,calc,window";
     show-icons: true;
     icon-theme: "Papirus";
+    kb-row-tab: "Shift+Tab";
+    kb-mode-next: "Tab";
 }
 @theme "jellybeans"
