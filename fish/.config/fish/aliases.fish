@@ -10,12 +10,19 @@ function vima
 	vim $argv[1] $marks
 end
 alias vim nvim
+alias v vim
 
 # cd aliases
-set dotfiles "$HOME/dotfiles"
-alias ddot "cd $dotfiles"
+set dots "$HOME/dotfiles"
+alias ddots "cd $dots"
 set repos "$HOME/repos"
 alias drepos "cd $repos"
+set doti3 "$dots/i3/.config/i3"
+alias ddoti3 "cd $doti3"
+set doti3c "$doti3/config.i3config"
+set dotvim "$dots/.vim"
+alias ddotvim "cd $dotvim"
+set dotvimc "$dots/vim/.vimrc"
 
 # ls
 alias ls 'ls --color=auto -alh -I "." -I ".."'
