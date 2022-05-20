@@ -56,6 +56,8 @@ nnoremap w<right> <c-w>l
 " Window resizing
 nnoremap w- :vertical res -5<enter>
 nnoremap w= :vertical res +5<enter>
+" Map U to redo
+noremap U <C-R>
 
 " Fuzzy finding
 set path=**
