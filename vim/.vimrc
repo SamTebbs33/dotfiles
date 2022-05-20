@@ -25,6 +25,9 @@ set visualbell
 set hlsearch
 set encoding=utf8
 set guifont=Source\ Code\ Pro\ For\ Powerline\ 11
+set shiftwidth=4
+set tabstop=4
+set expandtab
 
 let mapleader = " "
 nnoremap <leader>s :%s/
@@ -181,10 +184,10 @@ let g:gitgutter_realtime=0
 let g:gitgutter_eager=0
 
 " Filetype-specific
-autocmd FileType c setlocal expandtab shiftwidth=4 autoindent
-autocmd FileType cpp setlocal expandtab shiftwidth=4 autoindent
-autocmd FileType verilog setlocal expandtab shiftwidth=4 autoindent
-autocmd FileType asm setlocal expandtab shiftwidth=4 autoindent tabstop=4
+autocmd FileType c setlocal expandtab shiftwidth=4 tabstop=4 autoindent
+autocmd FileType cpp setlocal expandtab shiftwidth=4 tabstop=4 autoindent
+autocmd FileType verilog setlocal expandtab shiftwidth=4 tabstop=4 autoindent
+autocmd FileType asm setlocal expandtab shiftwidth=4 tabstop=4 autoindent
 
 " Tagbar
 nnoremap <leader>l :TagbarToggle<cr>
