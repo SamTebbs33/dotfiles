@@ -217,6 +217,15 @@ let g:zig_fmt_autosave = 1
 set undofile
 set undodir=~/.vim/undo-dir
 
+" Snippets
+fun! InsertSnippet(name)
+  silent exe ":-1read ~/.vim/snippets/" . a:name . ".*"
+endfun
+" insert a snippet by name
+nnoremap ' :call InsertSnippet("")<Left><Left>
+" find the next snippet parameter to replace and substitute it
+nnoremap # /@@<CR>gns
+
 " vim-buffet
 nmap <leader>1 <Plug>BuffetSwitch(1)
 nmap <leader>2 <Plug>BuffetSwitch(2)
