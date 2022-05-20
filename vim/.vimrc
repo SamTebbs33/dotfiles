@@ -246,7 +246,7 @@ let g:ale_echo_msg_format="[%linter%]: %s"
 nnoremap <silent> <leader>[ :ALEPreviousWrap<CR>
 nnoremap <silent> <leader>] :ALENextWrap<CR>
 
-" Write a backup of the current file to /tmp/%
+" Write a backup of the current file to ~/.vim/bkp/%
 fun! WriteBackup()
   let fname =  "".expand("%:t") . ".bkp"
   silent exe ":!cp % ~/.vim/bkp/" . fname
