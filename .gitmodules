@@ -72,4 +72,4 @@
 	url = git@github.com:OmniSharp/omnisharp-vim
 [submodule "rofi/.config/rofi/rofi-power-menu"]
 	path = rofi/.config/rofi/rofi-power-menu
-	url = git@github.com:jluttine/rofi-power-menu
+	url = git@github.com:SamTebbs33/rofi-power-menu
