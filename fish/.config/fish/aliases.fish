@@ -11,6 +11,12 @@ function vima
 end
 alias vim nvim
 
+# cd aliases
+set dotfiles "$HOME/dotfiles"
+alias ddot "cd $dotfiles"
+set repos "$HOME/repos"
+alias drepos "cd $repos"
+
 # ls
 alias ls 'ls --color=auto -alh -I "." -I ".."'
 function lss

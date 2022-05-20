@@ -2,10 +2,6 @@ function google -a query -d "Google a query"
 	firefox "http://www.google.com/search?query=$query"
 end
 
-function d -a alias
-    cd (dx $alias)
-end
-
 function cl -a dir args -d "Cd into dir then list files"
 	cd $dir
 	ls $args
