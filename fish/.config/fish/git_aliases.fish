@@ -1,4 +1,5 @@
 mk_abbrev gca "git commit --amend"
+mk_abbrev gcan "git commit --amend --no-edit"
 mk_abbrev gr "git reset"
 mk_abbrev grh "git reset --hard"
 mk_abbrev gu "git push"
