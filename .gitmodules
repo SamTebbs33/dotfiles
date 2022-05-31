@@ -70,9 +70,6 @@
 [submodule "vim/.vim/bundle/omnisharp-vim"]
 	path = vim/.vim/bundle/omnisharp-vim
 	url = git@github.com:OmniSharp/omnisharp-vim
-[submodule "rofi/.config/rofi/rofi-power-menu"]
-	path = rofi/.config/rofi/rofi-power-menu
-	url = git@github.com:SamTebbs33/rofi-power-menu
 [submodule "rofi/.config/rofi/extras"]
 	path = rofi/.config/rofi/extras
 	url = git@github.com:adi1090x/rofi

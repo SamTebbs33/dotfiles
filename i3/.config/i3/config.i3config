@@ -180,7 +180,7 @@ bar {
                 playerctl.format="{{artist}} - {{title}}" playerctl.layout="playerctl.prev,playerctl.pause,playerctl.next,playerctl.song" playerctl.hide="true" \
                 pasink.percent_change="5%" pasink.limit="100%" \
                 xrandr.autotoggle="true" \
-                system.popupcmd="rofi -show power-menu -modi power-menu:$HOME/.config/rofi/rofi-power-menu/rofi-power-menu" \
+                system.popupcmd="$HOME/.config/rofi/extras/1080p/applets/applets/powermenu.sh" \
                 -a cpu memory disk github \
                 -t jellybeans
 }
