@@ -200,7 +200,7 @@ mode "$mode_system" {
 bindsym $mode+Pause mode "$mode_system"
 
 # Bindings
-bindsym $mod+shift+x exec i3lock
+bindsym $mod+shift+x exec i3lock-fancy -p -n
 
 # Wallpaper
 exec_always feh --bg-scale ~/Pictures/wallpapers/space.jpg
