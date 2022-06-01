@@ -191,6 +191,7 @@ autocmd FileType asm setlocal expandtab shiftwidth=4 tabstop=4 autoindent
 
 " Tagbar
 nnoremap <leader>l :TagbarToggle<cr>
+let g:airline#extensions#tagbar#enabled = 1
 
 " Hex mode
 nnoremap <leader>h :%!xxd<cr>
