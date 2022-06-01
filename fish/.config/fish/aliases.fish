@@ -30,6 +30,9 @@ alias lg "ls --git"
 alias tree "ls --tree"
 mk_abbrev treed "tree --level"
 
+# vifm
+alias fm "vifm"
+
 # Less
 alias less "less -R"
 
