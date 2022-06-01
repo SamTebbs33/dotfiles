@@ -25,10 +25,7 @@ alias ddotvim "cd $dotvim"
 set dotvimc "$dots/vim/.vimrc"
 
 # ls
-alias ls 'ls --color=auto -alh -I "." -I ".."'
-function lss
-    ls $argv | less
-end
+alias ls 'exa --color=auto -alh -I "." -I ".."'
 
 # Less
 alias less "less -R"
