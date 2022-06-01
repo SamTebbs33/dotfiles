@@ -26,6 +26,7 @@ set dotvimc "$dots/vim/.vimrc"
 
 # ls
 alias ls 'exa --color=auto -alh -I "." -I ".."'
+alias lg "ls --git"
 
 # Less
 alias less "less -R"
