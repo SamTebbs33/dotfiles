@@ -31,7 +31,8 @@ alias tree "ls --tree"
 mk_abbrev treed "tree --level"
 
 # vifm
-alias fm "vifm"
+# alias to vifmrun to get image previews working. this executable is in the vifm dir
+alias fm "vifmrun"
 
 # Less
 alias less "less -R"
