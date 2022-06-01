@@ -253,11 +253,13 @@ nnoremap <tab> :b#<CR>
 
 " ale
 let g:ale_linters = {
-\ 'cs': ['OmniSharp']
+\ 'cs': ['OmniSharp'],
+\ 'cpp': ['clangd']
 \}
 let g:ale_echo_msg_format="[%linter%]: %s"
 nnoremap <silent> <leader>[ :ALEPreviousWrap<CR>
 nnoremap <silent> <leader>] :ALENextWrap<CR>
+let g:ale_c_parse_compile_commands=1
 
 " Write a backup of the current file to ~/.vim/bkp/%
 fun! WriteBackup()
