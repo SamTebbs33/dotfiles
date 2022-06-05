@@ -6,6 +6,8 @@ export VISUAL=$EDITOR
 #set -x MOZ_ENABLE_WAYLAND 1
 #set -x SDL_VIDEODRIVER wayland
 
+fish_vi_key_bindings
+
 function mk_abbrev -a abbrv -a expansion
 	abbr -a $abbrv $expansion
 end
