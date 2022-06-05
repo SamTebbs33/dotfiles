@@ -14,6 +14,12 @@ function fnd -a pattern -a path
 	end
 	find $path -name $pattern 2>&1 | grep -v "Permission denied"
 end
+function fndi -a pattern -a path
+	if [ -z "$path" ]
+		set path "."
+	end
+	find $path -iname $pattern 2>&1 | grep -v "Permission denied"
+end
 
 function bkp -a dir -d "Backup a folder to a bkp directory"
 	mkdir bkp
