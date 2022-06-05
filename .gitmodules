@@ -73,3 +73,6 @@
 [submodule "rofi/.config/rofi/extras"]
 	path = rofi/.config/rofi/extras
 	url = git@github.com:adi1090x/rofi
+[submodule "rofi/.config/rofi/rofiscripts"]
+	path = rofi/.config/rofi/rofiscripts
+	url = git@gitlab.com:SamTebbs33/rofiscripts.git

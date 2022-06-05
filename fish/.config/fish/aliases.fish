@@ -42,6 +42,8 @@ mk_abbrev . "open ."
 mk_abbrev .. 'cd ..'
 mk_abbrev mk "mkfile 0"
 mk_abbrev cls "clear"
+
+# Package management
 mk_abbrev ageti "sudo apt-get install"
 mk_abbrev agetu "sudo apt-get update"
 mk_abbrev paci "sudo pacman -S"
@@ -49,6 +51,7 @@ mk_abbrev pacs "sudo pacman -Syy"
 mk_abbrev pacu "sudo pacman -Syyu"
 mk_abbrev pacr "sudo pacman -R"
 mk_abbrev pacf "sudo pacman -F"
+mk_abbrev yayi "yay -S"
 
 # RM
 alias rmr "rm -r"
