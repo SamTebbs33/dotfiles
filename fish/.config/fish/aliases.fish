@@ -42,6 +42,7 @@ mk_abbrev . "open ."
 mk_abbrev .. 'cd ..'
 mk_abbrev mk "mkfile 0"
 mk_abbrev cls "clear"
+alias clip "xsel -i -b"
 
 # Package management
 mk_abbrev ageti "sudo apt-get install"
