@@ -175,7 +175,7 @@ for_window [class="Pavucontrol" title="Volume Control"] floating enable
 bar {
     font pango:Source Code Pro 13px
     status_command bumblebee-status -f $HOME/log/bumblebee-status.log \
-            -m progress cpu disk memory nic xrandr github playerctl pasink datetime system \
+            -m progress cpu disk memory nic github playerctl pasink datetime system \
             -p datetime.format="%a %d/%m/%Y - %H:%M" \
             disk.system="SI" disk.format="{used} ({percent:00.00f}%)" \
             nic.states="up" nic.format="{ip} {ssid}" \
