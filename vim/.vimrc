@@ -196,11 +196,6 @@ let g:airline#extensions#tagbar#enabled = 1
 " Hex mode
 nnoremap <leader>h :%!xxd<cr>
 
-" UltiSnips
-let g:UltiSnipsExpandTrigger="<c-space>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-
 " vim-localvimrc
 "let g:localvimrc_sandbox = 0
 let g:localvimrc_ask = 0
@@ -223,7 +218,7 @@ fun! InsertSnippet(name)
   silent exe ":-1read ~/.vim/snippets/" . a:name . ".*"
 endfun
 " insert a snippet by name
-nnoremap ' :call InsertSnippet("")<Left><Left>
+nnoremap ; :call InsertSnippet("")<Left><Left>
 " find the next snippet parameter to replace and substitute it
 nnoremap # /@@<CR>gns
 
