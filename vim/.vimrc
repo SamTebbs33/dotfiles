@@ -103,7 +103,7 @@ autocmd InsertLeave * set iminsert=0
 set directory=/tmp
 
 " Set filtype when opening i3 config
-autocmd BufEnter ~/dotfiles/i3/.config/i3/config set ft=i3config
+autocmd BufEnter ~/dotfiles/i3/.config/i3/config.i3config set ft=i3config
 
 " Change vim shell to the standard shell
 if &shell =~# 'fish$'
