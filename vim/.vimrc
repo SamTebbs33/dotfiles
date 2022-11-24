@@ -61,6 +61,8 @@ nnoremap w- :vertical res -5<enter>
 nnoremap w= :vertical res +5<enter>
 " Map U to redo
 noremap U <C-R>
+" Map // to search for selection
+vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>
 
 " Fuzzy finding
 set path=**
