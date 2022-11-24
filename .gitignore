@@ -9,3 +9,4 @@ i3/.config/i3/device.i3config
 vim/.vim/bkp
 sway/.config/sway/config
 bumblebee-status/.config/bumblebee-status/config
+fish/.config/fish/device.fish
