@@ -3,6 +3,7 @@ configuration {
     show-icons: true;
     icon-theme: "Papirus";
     kb-row-tab: "Shift+Tab";
+    kb-element-next: "Shift+Escape";
     kb-mode-next: "Tab";
 }
 @theme "jellybeans"
