@@ -30,6 +30,9 @@ set tabstop=4
 set expandtab
 
 let mapleader = " "
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+nnoremap <leader>b :bd<CR>
 nnoremap <leader>s :%s/
 nnoremap <leader>o o<esc>
 nnoremap <leader>O O<esc>
