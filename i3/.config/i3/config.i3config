@@ -178,10 +178,11 @@ for_window [class="Paradox Launcher"] floating enable
 bar {
     font pango:FontAwesome, Source Code Pro 13px
     status_command bumblebee-status -f $HOME/log/bumblebee-status.log  --iconset awesome-fonts \
-            -m progress cpu disk memory nic github playerctl pasink datetime system \
+            -m progress cpu disk memory nic shell github playerctl pasink datetime system \
             -p datetime.format="%a %d/%m/%Y - %H:%M" \
             disk.system="SI" disk.format="{used} ({percent:00.00f}%)" \
             nic.states="up" nic.format="{ip} {ssid}" \
+            shell.command="~/dotfiles/i3/share_price.sh ARM" \
             memory.format="{used} ({percent:00.00f}%)" \
             playerctl.format="{{artist}} - {{title}}" playerctl.layout="playerctl.prev,playerctl.pause,playerctl.next,playerctl.song" playerctl.hide="true" \
             pasink.percent_change="5%" pasink.limit="100%" \
