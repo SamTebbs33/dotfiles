@@ -4,6 +4,7 @@ function add_bin_dir -a dir
 	end
 end
 
+add_bin_dir $HOME/.local/bin
 add_bin_dir $HOME/bin
 add_bin_dir /var/lib/snapd/snap/bin
 
