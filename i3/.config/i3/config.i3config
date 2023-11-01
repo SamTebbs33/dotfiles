@@ -183,6 +183,7 @@ bar {
             disk.system="SI" disk.format="{used} ({percent:00.00f}%)" \
             nic.states="up" nic.format="{ip} {ssid}" \
             shell.command="~/dotfiles/i3/share_price.sh ARM" \
+            shell.interval=60 \
             memory.format="{used} ({percent:00.00f}%)" \
             playerctl.format="{{artist}} - {{title}}" playerctl.layout="playerctl.prev,playerctl.pause,playerctl.next,playerctl.song" playerctl.hide="true" \
             pasink.percent_change="5%" pasink.limit="100%" \
