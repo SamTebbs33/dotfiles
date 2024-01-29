@@ -64,9 +64,6 @@
 [submodule "vim/.vim/bundle/vim-solidity"]
 	path = vim/.vim/bundle/vim-solidity
 	url = https://github.com/tomlion/vim-solidity
-[submodule "vim/.vim/bundle/coc.vim"]
-	path = vim/.vim/bundle/coc.vim
-	url = https://github.com/neoclide/coc.nvim
 [submodule "vim/.vim/bundle/omnisharp-vim"]
 	path = vim/.vim/bundle/omnisharp-vim
 	url = git@github.com:OmniSharp/omnisharp-vim
