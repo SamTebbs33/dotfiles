@@ -10,3 +10,7 @@ vim/.vim/bkp
 sway/.config/sway/config
 bumblebee-status/.config/bumblebee-status/config
 fish/.config/fish/device.fish
+fish/.config/fish/completions
+fish/.config/fish/conf.d/
+fish/.config/fish/fish_plugins
+fish/.config/fish/functions
