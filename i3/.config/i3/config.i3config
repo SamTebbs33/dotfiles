@@ -118,7 +118,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-set $wkspcTerminals ""
+set $wkspcTerminals " "
 set $wkspcBrowser ""
 set $wkspcChat ""
 set $wkspcMedia ""
