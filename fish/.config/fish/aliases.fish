@@ -12,6 +12,9 @@ end
 alias vim nvim
 alias v vim
 
+#grep
+alias g "grep -Rn"
+
 # cd aliases
 set dots "$HOME/dotfiles"
 alias ddots "cd $dots"
