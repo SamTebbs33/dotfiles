@@ -15,6 +15,12 @@ alias v vim
 #grep
 alias g "grep -Rn"
 
+# File manipulation
+function rn -a path -a newname
+  set base (path dirname $path)
+  mv $path $base/$newname
+end
+
 # cd aliases
 set dots "$HOME/dotfiles"
 alias ddots "cd $dots"
