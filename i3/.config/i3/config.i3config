@@ -163,6 +163,7 @@ assign [class="Thunderbird"] $wkspcMail
 assign [class="Steam"] $wkspcGames
 assign [class="unityhub"] $wkspcIDE
 assign [class="zoom"] $wkspcChat
+assign [class="mtgo.exe"] $wkspcGames
 # Some programs don't assign the class until the window has already been created
 for_window [class="(?i)terminator"] move to workspace $wkspcTerminals
 for_window [class="(?i)spotify"] move to workspace $wkspcMedia
