@@ -157,8 +157,6 @@ bindsym $mod+7 workspace $wkspcIDE
 bindsym F7 workspace $wkspcIDE
 bindsym $mod+8 workspace $wkspcGames
 bindsym F8 workspace $wkspcGames
-bindsym $mod+9 workspace $wkspcDebug
-#bindsym F9 workspace $wkspcDebug
 
 assign [class="firefox"] $wkspcBrowser
 assign [class="Thunderbird"] $wkspcMail
