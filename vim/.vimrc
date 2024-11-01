@@ -42,6 +42,9 @@ nnoremap <leader>w :w<CR>:call WriteBackup()<CR>
 nnoremap <leader>x :wq<CR>
 nnoremap <leader>f :Autoformat<CR>
 nnoremap <leader>e :e!<CR>
+" Search for selected text
+vnoremap <leader>/ y/<C-r>"
+vnoremap <leader>s y:%s/<C-r>"
 set backspace=indent,eol,start
 " Reload .vimrc
 nnoremap <leader>r :so ~/.vimrc<CR>
