@@ -17,6 +17,8 @@ smart_gaps on
 gaps inner 3
 gaps outer 3
 
+focus_follows_mouse yes
+
 # Hide title bar
 new_window 1pixel
 # Disable window borders
