@@ -28,6 +28,8 @@ set guifont=Source\ Code\ Pro\ For\ Powerline\ 11
 set shiftwidth=4
 set tabstop=4
 set expandtab
+set modeline
+set modelines=5
 
 let mapleader = " "
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
