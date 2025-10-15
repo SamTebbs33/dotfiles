@@ -181,7 +181,7 @@ no_focus [window_role="alert"]
 bar {
     font pango:FontAwesome, Source Code Pro 13px
     status_command bumblebee-status -f $HOME/log/bumblebee-status.log  --iconset awesome-fonts \
-            -m progress cpu disk memory nic shell github playerctl pasink datetime system \
+            -m progress cpu disk memory nic shell playerctl pasink datetime system \
             -p datetime.format="%a %d/%m/%Y - %H:%M" \
             disk.system="SI" disk.format="{used} ({percent:00.00f}%)" \
             nic.states="up" nic.format="{ip} {ssid}" \
