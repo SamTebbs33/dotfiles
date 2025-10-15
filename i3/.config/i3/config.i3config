@@ -213,9 +213,6 @@ bindsym $mode+Pause mode "$mode_system"
 # Bindings
 bindsym $mod+shift+x exec i3lock-fancy -p -n
 
-# Wallpaper
-exec_always feh --bg-scale ~/Pictures/wallpapers/forest.jpg
-
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec pactl set-sink-mute @DEFAULT_SINK@ false ; exec pactl set-sink-volume @DEFAULT_SINK@ 5%+
 bindsym XF86AudioLowerVolume exec pactl set-sink-mute @DEFAULT_SINK@ false ; exec pactl set-sink-volume @DEFAULT_SINK@ 5%-
