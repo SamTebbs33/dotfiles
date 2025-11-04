@@ -137,10 +137,12 @@ let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
       let g:airline_symbols = {}
 endif
-let g:airline_symbols.branch = '⎇ '
+let g:airline_symbols.branch = ''
 let g:airline_symbols.space = "\ua0"
 let g:airline_theme="jellybeans"
 let g:airline_skip_empty_sections=1
+let g:airline#extensions#hunks#enabled = 0
+let g:airline_section_y = ''
 
 " netrw
 let g:netrw_liststyle = 0 " Tree mode. 0=thin, 1=long, 2=wide
