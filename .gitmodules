@@ -76,3 +76,6 @@
 [submodule "vim/.vim/bundle/coc.nvim"]
 	path = vim/.vim/bundle/coc.nvim
 	url = git@github.com:neoclide/coc.nvim
+[submodule "vim/.vim/bundle/mini.nvim"]
+	path = vim/.vim/bundle/mini.nvim
+	url = git@github.com:nvim-mini/mini.nvim
