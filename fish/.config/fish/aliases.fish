@@ -62,6 +62,8 @@ mk_abbrev pacu "sudo pacman -Syyu"
 mk_abbrev pacr "sudo pacman -R"
 mk_abbrev pacf "sudo pacman -F"
 mk_abbrev yayi "yay -S"
+mk_abbrev yays "yay -Syy"
+mk_abbrev yayu "yay -Syyu"
 
 # RM
 alias rmr "rm -r"
