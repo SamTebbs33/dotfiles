@@ -79,3 +79,6 @@
 [submodule "vim/.vim/bundle/mini.nvim"]
 	path = vim/.vim/bundle/mini.nvim
 	url = git@github.com:nvim-mini/mini.nvim
+[submodule "vim/.vim/bundle/robotframework-vim"]
+	path = vim/.vim/bundle/robotframework-vim
+	url = git@github.com:mfukar/robotframework-vim
