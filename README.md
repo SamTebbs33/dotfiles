@@ -3,6 +3,7 @@ Install:
 * fish
 * base-devel
 Add user
+Switch to user
 Install:
 * stow
 * inetutils
@@ -11,25 +12,38 @@ Install:
 * exa (for fancy ls commands)
 Run:
 * ssh-keygen
-* gh auth login
 
-Clone (with --recursive) this repo and stow each subdir (remove ~/.config/fish before stowing fish)
+Clone this repo with --recursive and stow each subdir (remove ~/.config/fish before stowing fish)
 
 Install from aur:
 * yay (needs fakeroot and debugedit)
 Install:
-* reflector (and enable reflector.timer, for updating pacman mirror list automatically every week)
+* reflector (and enable reflector.timer with systemctl, for updating pacman mirror list automatically every week)
 * xorg
+* xorg-xinit
+* xsel
 * i3
 * alsa-utils (for unmuting sound channels)
 * htop
 * tar
 * nvim
 * rofi (alternative launcher to dmenu)
+* rofi-calc
 * terminator
 * vifm
 * openssh
 * firefox
 * github-cli
+* otf-font-awesome
+* pulseaudio
+* pulseaudio-alsa
+* tk (for bumblebee-status system module)
 Install with yay:
 * bumblebee-status
+* ttf-sourcecodepro-nerd
+mkdir ~/log (for bumblebee-status.log)
+run ~/.config/i3/combine_config.sh
+Set git user.email and user.name
+
+Ask user to install nvidia driver from https://wiki.archlinux.org/title/NVIDIA#
+Ask user to reboot, log in to firefox, log in to bitwarden, put ssh key in github.
