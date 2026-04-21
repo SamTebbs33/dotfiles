@@ -13,7 +13,7 @@ Install:
 Run:
 * ssh-keygen
 
-Clone this repo with --recursive and stow each subdir (remove ~/.config/fish before stowing fish)
+Clone this repo with --recursive, mkdir ~/bin and stow each subdir (remove ~/.config/fish before stowing fish)
 
 Install from aur:
 * yay (needs fakeroot and debugedit)
@@ -38,12 +38,16 @@ Install:
 * pulseaudio
 * pulseaudio-alsa
 * tk (for bumblebee-status system module)
+* autorandr
+* install nodejs and npm
 Install with yay:
 * bumblebee-status
 * ttf-sourcecodepro-nerd
 mkdir ~/log (for bumblebee-status.log)
 run ~/.config/i3/combine_config.sh
 Set git user.email and user.name
+Run npm ci in .vim/bundle/coc.nvim
 
 Ask user to install nvidia driver from https://wiki.archlinux.org/title/NVIDIA#
 Ask user to reboot, log in to firefox, log in to bitwarden, put ssh key in github.
+Then configure screens with xrandr and save config with autorandr.
