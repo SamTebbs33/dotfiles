@@ -27,6 +27,8 @@ Install:
 * htop
 * tar
 * nvim
+* scrot
+* ripgrep
 * rofi (alternative launcher to dmenu)
 * rofi-calc
 * terminator
