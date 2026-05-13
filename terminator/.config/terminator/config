@@ -1,5 +1,6 @@
 [global_config]
   borderless = True
+  ask_before_closing = never
 [keybindings]
 [profiles]
   [[default]]
